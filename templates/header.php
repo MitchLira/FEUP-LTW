@@ -6,7 +6,7 @@
   </head>
   <body>
     <header>
-      <h1><a href="index.php">Restaurant Guide</a></h1>
+      <h1><a>Restaurant Guide</a></h1>
     </header>
 	  
 	  
