@@ -2,7 +2,7 @@
 	function getAllRestaurants($dbh) {
 		$stmt = $dbh->prepare('SELECT * FROM restaurant');	
 		$stmt->execute();
-	return $stmt->fetchAll();
+		return $stmt->fetchAll();
 	}
 
 	function getRestaurantsByRating($dbh) {
@@ -11,7 +11,7 @@
 							   GROUP BY restaurant.name 
 							   ORDER BY rate DESC');
 		$stmt->execute();
-	return $stmt->fetchAll();
+		return $stmt->fetchAll();
 	}
 
 	function getRestaurantsByRatingLimit($dbh, $limit) {
@@ -20,22 +20,29 @@
 							   GROUP BY restaurant.name 
 							   ORDER BY rate DESC
 							   LIMIT ?');
-		$stmt->execute(array($_GET['limit']));
-	return $stmt->fetchAll();
+		$stmt->execute(array($limit));
+		return $stmt->fetchAll();
 	}
 
 	function getRecentRestaurants($dbh) {
 		$stmt = $dbh->prepare('SELECT * FROM restaurant 
 							   ORDER BY entryDate DESC');
 		$stmt->execute();
-	return $stmt->fetchAll();
+		return $stmt->fetchAll();
 	}
 	
 	function getRecentRestaurantsLimit($dbh, $limit) {
 		$stmt = $dbh->prepare('SELECT * FROM restaurant 
 							   ORDER BY entryDate DESC
 							   LIMIT ?');
-		$stmt->execute(array($_GET['limit']));
-	return $stmt->fetchAll();
+		$stmt->execute(array($limit));
+		return $stmt->fetchAll();
+	}
+
+	function getRestaurantById($dbh, $id) {
+		$stmt = $dbh->prepare('SELECT * FROM restaurant 
+							   WHERE id = ?');
+		$stmt->execute(array($id));
+		return $stmt->fetch();
 	}
 ?>

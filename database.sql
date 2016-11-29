@@ -13,11 +13,11 @@ CREATE TABLE user (
 
 CREATE TABLE restaurant (
 	id INTEGER PRIMARY KEY AUTOINCREMENT,
-	idOwner INTEGER REFERENCES user(username),
+	owner VARCHAR REFERENCES user(username),
 	name VARCHAR,
 	location VARCHAR,
 	price FLOAT,
-	category VARCHAR,
+	categories VARCHAR,
 	open TIME,
 	close TIME,
 	entryDate DATE
