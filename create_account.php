@@ -47,9 +47,9 @@
 	  <?php
 		include_once('database/create_account.php'); 
 		include_once('database/connection.php');
-		
+
 		if(isset($_POST['submit'])){
-			
+
 		}
 	  ?>
 </html>
