@@ -1,6 +1,6 @@
 <?php
 	function getAllRestaurants($dbh) {
-		$stmt = $dbh->prepare('SELECT * FROM restaurant');
+		$stmt = $dbh->prepare('SELECT * FROM restaurant');	
 		$stmt->execute();
 	return $stmt->fetchAll();
 	}
