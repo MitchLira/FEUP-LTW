@@ -16,12 +16,12 @@
 		  
 		  <?php
 			if (isset($_SESSION['username'])) {
-				echo "hehe";
+				include('logout.html');
 			}
-			else {
-				echo "<a>Login</a>";
-				echo "<a>Register</a>";
-			} 
+			else { ?>
+				<a href="login.html" id="login">Login</a>
+				<a href="create_account.php" id="create">Register</a>
+			<?php } 
 		  ?>
 	  </header>
 	  
