@@ -1,3 +1,15 @@
+<?php
+
+	function userIsOwner($username, $restaurant) {
+		return ($restaurant['username'] == $username);
+	}
+
+
+	if (isset($_SESSION['username']) && userIsOwner($_SESSION['username'], $restaurant)) {
+		echo "<a>Edit</a>";
+	}
+?>
+
 <section id="mainInfo">
 	<h3 id="name"><?=$restaurant['name']?></h3>
 	<h4 id="owner">By: <?=$restaurant['owner']?></h4>
