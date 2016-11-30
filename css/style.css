@@ -1,28 +1,86 @@
+html, body {
+	margin: 0;
+}
+
+body{
+	background-image: url(/images/homeImage.jpg);
+}
 header {
-  background-color: #336699;
-  padding: 2em;
+	position: fixed;
+	background-color: #F26632;
+	width: 100%;
+	padding: 1em;
+	top: 0;
+	z-index: -1;
+}
+
+.container {
+	position: relative;
+	margin-top: 3em;
+	z-index: -2;
+
+}
+
+#textSearch {
+	position: absolute;
+	width: 20em;
+	height: 1.5em;
+	left: 50%;
+	margin: 0 0 0 -10em;
+
 }
 
 a {
-  color: yellow;
+  color: #EEF0F0;
   text-decoration: none;
+	float: right;
+	margin-right: 3em;
+}
+
+#home {
+	float: left;
+	color: BLACK;
+	font-size: 120%;
+}
+
+section {
+	width: 30em;
+	background-color: #393C71;
+	display: inline-block;
+	align:"center";
+	margin-top: 10em;
+}
+#top_rated {
+	float: left;
+	margin-left: 20em;
+}
+#most_recent{
+	float: right;
+	margin-right: 20em;
+}
+
+section h1 {
+	color: #EEF0F0;
+	text-align : center;
 }
 
 article {
-  background-color: #669933;
-  color: white;
+  background-color: #393C71;
+  color: #F26632;
   padding: 2em;
-  margin: 1em 0; 
+  margin: 1em 0;
+	text-align: center;
 }
 
 form {
-  background-color: #669933;
-  padding: 1em;
+	width: 45%;
+	border: 2px solid;
 }
 
 form label {
-  display: block;
-  color: white;
+	display: block;
+	text-align: center;
+  color: #FBA829;
   margin-top: 1em;
   margin-bottom: 0.5em;
 }
