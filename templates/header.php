@@ -19,8 +19,8 @@
 				include('logout.html');
 			}
 			else { ?>
-				<a href="login.html" id="login">Login</a>
-				<a href="create_account.php" id="create">Register</a>
+				<a class="header_link" href="login.html" id="login">Login</a>
+				<a class="header_link" href="create_account.php" id="create">Register</a>
 			<?php }
 		  ?>
 	  </header>
