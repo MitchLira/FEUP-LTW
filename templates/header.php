@@ -5,10 +5,6 @@
    	<link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-	  <?php
-	  	session_start();
-	  ?>
-
 	  <header>
 		  <a href="home.php" id="home">Restaurant Guide</a>
 		  <input type="text" id="textSearch" placeholder="Search RestaurantGuide..."/>

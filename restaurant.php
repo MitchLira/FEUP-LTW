@@ -1,8 +1,8 @@
 <?php
 	include_once('database/connection.php');
-	include_once('database/restaurants.php'); 
+	include_once('database/restaurants.php');
 	include_once('database/reviews.php');
-	
+
 	include ('templates/header.php');
 
 	$id = $_GET['id'];
