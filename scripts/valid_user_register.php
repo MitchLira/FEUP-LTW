@@ -3,5 +3,5 @@
     include_once('../database/user.php');
 
     $user = getUser($dbh, $_GET['username']);
-    echo json_encode($user != false);
+    echo json_encode($user == false);   // true if query returns empty
 ?>

@@ -1,7 +1,7 @@
 $.urlParam = function(name){
 	var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
 	return decodeURIComponent(results[1]) || 0;
-}
+};
 
 $(setUp);
 
@@ -16,6 +16,8 @@ function addDoms() {
     }
     else if ($('body').hasClass('create_account')) {
         $("input[name=username]").focusout(checkUserName);
+        $("form input").keyup(checkValidRegister);
+        $("input[type=date]").change(checkValidRegister);
     }
 }
 
@@ -46,8 +48,36 @@ function checkUserName() {
         url: "../scripts/valid_user_register.php",
         type: "get",
         data: { username : user },
-        success: function(valid) {
-            console.log(valid);
+        success: function(validUser) {
+
+            if (validUser == "true") {
+                $(".info").text("Username not yet in use!");
+                $(".info").css("color", "green");
+            }
+            else {
+                $(".info").text("Username already in use. Please choose a different one.");
+                $(".info").css("color", "red");
+            }
         }
     });
+}
+
+
+function checkValidRegister() {
+    var empty = false;
+    var button = $("input[name=submit]");
+
+    $("form input").each(function() {
+        if ($(this).val() === "") {
+            empty = true;
+            return false;
+        }
+    });
+
+    if (empty) {
+        button.prop("disabled", true);
+    }
+    else {
+        button.prop("disabled", false);
+    }
 }
