@@ -1,6 +1,5 @@
 html, body {
-	background-color: #393C71;
-	margin: 0;
+	margin: 0 0 1em 0;
 }
 
 
@@ -45,13 +44,13 @@ a {
 #home_background {
 		background-image: url("../images/homeImage.jpg");
 		background-size: cover;
-	  height: 100%;
+	  	height: 100%;
 		margin-top: 3em;
 
 }
 #home_container {
 	margin-top: 0em;
-	
+	height: auto;
 }
 
 #top_rated {
@@ -65,31 +64,41 @@ a {
 }
 
 a {
-	color: #EEF0F0;
+  color: black;
   text-decoration: none;
 }
 
 
 section {
 	width: 30em;
-	background-color: #393C71;
 	display: inline-block;
-	margin-top: 10em;
+	margin-top: 3em;
 }
 
 
 section h1 {
-	color: #EEF0F0;
+	color: black;
 	text-align : center;
 }
 
+.restaurant_container {
+	border: 1px solid black;
+}
+
 article {
-  background-color: #393C71;
 	background-size: cover;
-  color: #F26632;
-  padding: 2em;
-  margin: 1em 0;
+ 	color: #F26632;
+  	padding: 2em;
 	text-align: center;
+}
+
+article + article {
+	border-top: 1px solid black;
+}
+
+article:hover {
+	background-color: #EEF0F0;
+	transition: background-color 300ms linear;
 }
 
 #formEdit {

@@ -6,10 +6,12 @@
 			$username = $_POST['username'];
 			$password = $_POST['password'];
 			$realPass = getPassword($dbh, $username);
+
+			$userDb = getUser($dbh, $username);
 			
 			if($realPass == $password){
 				$_SESSION['username'] = $username;
-				echo $_SESSION['username'];
+				$_SESSION['status'] = $userDb['status'];
 			}
 			
 			header('Location: home.php'); 
