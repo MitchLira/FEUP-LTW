@@ -29,7 +29,7 @@
 				<article class="restaurant">
 					<h3>
 						<?php
-							$linkAddress = "restaurant.php?id=" . $restaurant['id'];
+							$linkAddress = "../pages/restaurant.php?id=" . $restaurant['id'];
 							echo "<a href=\"$linkAddress\">";
 							echo $restaurant['name'];
 							echo "</a>";

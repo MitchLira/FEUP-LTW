@@ -6,7 +6,7 @@
 
 
 	if (isset($_SESSION['username']) && userIsOwner($_SESSION['username'], $restaurant)) {
-		$linkAddress = "edit_restaurant.php?id=" . $restaurant['id'];
+		$linkAddress = "../pages/edit_restaurant.php?id=" . $restaurant['id'];
 ?>
 
 		<form id="formEdit" action="<?=$linkAddress?>" method="post">

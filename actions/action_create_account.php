@@ -1,6 +1,6 @@
 <?php
-	include_once("database/connection.php");
-	include_once("database/user.php");
+	include_once("../database/connection.php");
+	include_once("../database/user.php");
 
 	if(isset($_POST['submit'])){
 		$username = $_POST['username'];
@@ -12,6 +12,6 @@
 		
 		createUser($dbh, $username,$name,$email,$country,$birthday,$password);
 
-		header('Location: home.php');
+		header('Location: ../pages/home.php');
 	}
 ?>

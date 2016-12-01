@@ -1,3 +1,8 @@
+$.urlParam = function(name){
+	var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+	return decodeURIComponent(results[1]) || 0;
+}
+
 $(setUp);
 
 function setUp() {
@@ -7,7 +12,10 @@ function setUp() {
 
 function addDoms() {
     if ($('body').hasClass('restaurant')) {
-        $.getJSON("scripts/restaurant.php", addReviewTextArea);
+        $.getJSON("../scripts/restaurant.php", addReviewTextArea);
+    }
+    else if ($('body').hasClass('create_account')) {
+        $("input[name=username]").focusout(checkUserName);
     }
 }
 
@@ -31,7 +39,15 @@ function addReviewTextArea(session) {
 }
 
 
-$.urlParam = function(name){
-	var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
-	return decodeURIComponent(results[1]) || 0;
+function checkUserName() {
+    var user = $("input[name=username]").val();
+
+    $.ajax ({
+        url: "../scripts/valid_user_register.php",
+        type: "get",
+        data: { username : user },
+        success: function(valid) {
+            console.log(valid);
+        }
+    });
 }

@@ -1,4 +1,4 @@
-<form action="save_restaurant.php" method="post">
+<form action="../actions/save_restaurant.php" method="post">
 
     <input type="hidden" name="id" value="<?=$restaurant['id']?>">
    

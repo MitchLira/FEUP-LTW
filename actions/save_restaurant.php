@@ -1,6 +1,6 @@
 <?php
-	include_once("database/connection.php");
-	include_once("database/restaurants.php");
+	include_once("../database/connection.php");
+	include_once("../database/restaurants.php");
 
 	if(isset($_POST['submit'])){
        
@@ -13,6 +13,6 @@
 		$close = $_POST['close'];
 
 		updateRestaurantById($dbh, $id, $name, $location, $price, $categories, $open, $close);       
-		header('Location: home.php');
+		header('Location: ../pages/home.php');
 	}
 ?>

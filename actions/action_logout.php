@@ -3,5 +3,5 @@
 	unset($_SESSION['username']);
 	session_destroy();
 	
-	header('Location: home.php');
+	header('Location: ../pages/home.php');
 ?>
