@@ -38,4 +38,51 @@ a {
 	margin-right: 3em;
 }
 
+
+
 /*******************/
+
+#editRestaurant {
+  margin: auto;
+  margin-top: 5em;
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 24px;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  padding: 10px;
+}
+
+form label{
+	margin-top: 3em;
+	cursor: pointer;
+}
+
+form input {
+  width: 375px;
+  display: block;
+  border: 1px solid #999;
+  height: 25px;
+  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+textarea {
+  width: 375px;
+  height: 150px;
+  display: block;
+}
+
+#buttonSave {
+    padding:5px 15px; 
+    background:#ccc; 
+    cursor:pointer;
+	margin-top: 1em;
+}

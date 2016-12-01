@@ -1,4 +1,4 @@
-<form action="../actions/save_restaurant.php" method="post">
+<form action="../actions/save_restaurant.php" method="post" id="editRestaurant">
 
     <input type="hidden" name="id" value="<?=$restaurant['id']?>">
    
@@ -26,6 +26,6 @@
         <input type="time" name="close" value="<?=$restaurant['close']?>">
     </label>
 
-    <input type="submit" name="submit" value="Save">
+    <input type="submit" name="submit" value="Save" id="buttonSave">
 
 </form>
