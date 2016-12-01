@@ -1,0 +1,41 @@
+html, body {
+	background-color: #393C71;
+	margin: 0;
+}
+
+
+/***** Header *****/
+header {
+	position: fixed;
+	background-color: #F26632;
+	width: 100%;
+	padding: 1em;
+	top: 0;
+	z-index: 9999;
+}
+
+#home {
+	float: left;
+	color: BLACK;
+	font-size: 120%;
+}
+
+#textSearch {
+	position: absolute;
+	width: 20em;
+	height: 1.5em;
+	left: 50%;
+	margin: 0 0 0 -10em;
+}
+
+a {
+    color: #EEF0F0;
+    text-decoration: none;
+}
+
+.header_link {
+	float: right;
+	margin-right: 3em;
+}
+
+/*******************/

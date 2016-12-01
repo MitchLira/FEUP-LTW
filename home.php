@@ -9,6 +9,7 @@
 		die($e->getMessage());
 	}
 	
+  $cssPath = "css/home.css";
   include ('templates/header.php');
   include ('templates/home.php');
   include ('templates/footer.php');

@@ -1,12 +1,18 @@
 <?php
 
 	function userIsOwner($username, $restaurant) {
-		return ($restaurant['username'] == $username);
+		return ($restaurant['owner'] == $username);
 	}
 
 
 	if (isset($_SESSION['username']) && userIsOwner($_SESSION['username'], $restaurant)) {
-		echo "<a>Edit</a>";
+		$linkAddress = "edit_restaurant.php?id=" . $restaurant['id'];
+?>
+
+		<form id="formEdit" action="<?=$linkAddress?>" method="post">
+			<input id="btnEdit" type="submit" value="Edit" />
+		</form>
+<?php
 	}
 ?>
 
@@ -23,6 +29,7 @@
 </section>
 
 <section id="reviews">
+	<h1>Reviews</h1>
 	<?php foreach($reviews as $review) { ?>
 		<article class="review">
 			<p class="username"><?=$review['username']?></p>

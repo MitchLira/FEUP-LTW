@@ -2,7 +2,7 @@
   <head>
     <title>Restaurant Guide</title>
     <meta charset="utf-8">
-   	<link rel="stylesheet" href="css/style.css">
+   	<link rel="stylesheet" href="<?=$cssPath?>">
   </head>
   <body>
 	  <header>

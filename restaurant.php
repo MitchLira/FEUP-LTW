@@ -3,7 +3,6 @@
 	include_once('database/restaurants.php');
 	include_once('database/reviews.php');
 
-	include ('templates/header.php');
 
 	$id = $_GET['id'];
 	try {
@@ -13,6 +12,8 @@
 		die($e->getMessage());
 	}
 
+	$cssPath = "css/restaurant.css";
+	include ('templates/header.php');
 	include ('templates/restaurant.php');
 	include ('templates/footer.php');
 ?>

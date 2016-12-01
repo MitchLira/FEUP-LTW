@@ -45,4 +45,9 @@
 		$stmt->execute(array($id));
 		return $stmt->fetch();
 	}
+
+	function updateRestaurantById($dbh, $id, $name, $location, $price, $categories, $open, $close) {
+		$stmt = $dbh->prepare('UPDATE restaurant SET name = ?, location = ?, price = ?,  categories = ?, open = ?, close = ? WHERE id = ?');
+		$stmt->execute(array($name, $location, $price,$categories, $open, $close, $id));
+	}
 ?>
