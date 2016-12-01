@@ -7,11 +7,10 @@
 		$name = $_POST['name'];
 		$email = $_POST['email'];
 		$country = $_POST['country'];
-		$status = $_POST['status'];
-		$birthdat = $_POST['birthday'];
+		$birthday = $_POST['birthday'];
 		$password = $_POST['password'];
-
-		insertUser($dbh, $username,$name,$email,$country,$birthday,$password);
+		
+		createUser($dbh, $username,$name,$email,$country,$birthday,$password);
 
 		header('Location: home.php');
 	}
