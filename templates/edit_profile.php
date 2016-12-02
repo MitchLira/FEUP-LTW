@@ -1,17 +1,17 @@
 <form action="../actions/save_profile.php" method="post" id="editProfile">
+    
+    <input type="hidden" name="username" value="<?=$user['username']?>">
 
-    <input type="hidden" name="id" value="<?=$user['id']?>">
-   
     <label>Name:
-        <input type="text" name="name" value="<?=$user['name']?>">
+        <input type="text" name="name" value="<?=$user['name']?>" required>
     </label>
 
     <label>Email:
-        <input type="e-mail" name="email" value="<?=$user['email']?>">
+        <input type="e-mail" name="email" value="<?=$user['email']?>" required>
     </label>
 
     <label>Country:
-        <select name="country">
+        <select name="country" required>
             <option value="">Country...</option>
             <option value="Afganistan">Afghanistan</option>
             <option value="Albania">Albania</option>
@@ -264,13 +264,17 @@
     </label>
 
     <label>Birthday:
-        <input type="date" name="birthday" value="<?=$user['birthday']?>">
+        <input type="date" name="birthday" value="<?=$user['birthday']?>"required>
     </label>
 
     <label>Password:
-        <input type="password" name="password" value="<?=$user['password']?>" >
+        <input type="password" name="password" required >
     </label>
 
-    <input type="submit" name="submit" value="Save" id="buttonSave">
+    <label>Confirm Password:
+       <input type="password" name="confirm_password"  required>
+    </label>  
+
+    <input type="submit" name="submit" value="Save" id="buttonSave" >
 
 </form>
