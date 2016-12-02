@@ -1,16 +1,3 @@
-<?php
-
-	if (isset($_SESSION['username'])) {
-		$linkAddress = "../pages/edit_profile.php?id=" . $userProfile['username'];
-?>
-
-		<form id="formEdit" action="<?=$linkAddress?>" method="post">
-			<input id="btnEdit" type="submit" value="Edit" />
-		</form>
-<?php
-	}
-?>
-
 <section id="namesInfo">
 	<h3 id="name"><?=$userProfile['name']?></h3>
 	<h4 id='username'>@<?=$userProfile['username']?></h4>
@@ -35,12 +22,14 @@
 	if($userProfile['status'] == 'owner'){
 		$ownerRestaurants = getOwnerRestaurants($dbh, $userProfile['username']);
 	?>
-	
 	<section class="restaurants">
 		<h4><?=$userProfile['name'] ?> restaurants</h4>
 	
 		<?php foreach($ownerRestaurants as $rest){ ?>
 				<p> &#10039 <?=$rest['name']?></p>
+				<!-- Depois quando se meter o trigger falta meter o rating do restaurant
+					  <p> &#10039 <?=$rest['name']?> (ver na net codigo de uma seta)<?=$rest['rating']?></p> 
+				-->
 		<?php } ?>
 	</section>
 	

@@ -50,4 +50,11 @@
 		$stmt = $dbh->prepare('UPDATE restaurant SET name = ?, location = ?, price = ?,  categories = ?, open = ?, close = ? WHERE id = ?');
 		$stmt->execute(array($name, $location, $price,$categories, $open, $close, $id));
 	}
+
+	function getOwnerRestaurants($dbh, $username){
+		//mais tarde adicionar cenas de rating, depois de fazer trigger da base de dados
+		$stmt = $dbh->prepare('SELECT name FROM restaurant WHERE owner = ?');
+		$stmt->execute(Array($username));
+		return $stmt->fetchAll();
+	}
 ?>
