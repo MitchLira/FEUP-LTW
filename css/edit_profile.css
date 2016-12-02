@@ -1,3 +1,8 @@
+html, body {
+	margin: 0;
+}
+
+
 /***** Header *****/
 header {
 	position: fixed;
@@ -5,6 +10,7 @@ header {
 	width: 100%;
 	padding: 1em;
 	top: 0;
+	left: 0;
 	z-index: 9999;
 }
 
