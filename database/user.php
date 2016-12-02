@@ -18,4 +18,9 @@
 		$stmt = $dbh->prepare('INSERT INTO user VALUES(?,?,?,?,?,?,?)');
 		$stmt->execute(array($username, $name, $email, $country, 'user', $birthday, $password));
 	}
+
+	function updateUser($dbh, $username, $name, $email,$country,$birthday, $password){
+		$stmt = $dbh->prepare('UPDATE user SET name = ?, email = ?, country = ?,  birthday = ?, password = ? WHERE username = ?');
+		$stmt->execute(array($name, $email, $country,$birthday, $password, $username));
+	}
 ?>

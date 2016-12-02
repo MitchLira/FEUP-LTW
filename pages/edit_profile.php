@@ -4,13 +4,14 @@
   include_once('../database/restaurants.php');
   include_once('../database/reviews.php');
 
+  $username = $_SESSION['username'];
   try {
-		$restaurant = getRestaurantById($dbh, $_GET['id']);
+		$user = getUser($dbh, $username);
 	} catch(PDOException $e) {
 		die($e->getMessage());
-	}
+ }
 
-    $cssPath = "../css/edit_profile.css";
+  $cssPath = "../css/edit_profile.css";
     include ('../templates/header.php');
     include ('../templates/edit_profile.php');
     include ('../templates/footer.php');
