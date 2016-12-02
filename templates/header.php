@@ -2,6 +2,7 @@
   <head>
     <title>Restaurant Guide</title>
     <meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Pacifico|Shadows+Into+Light" rel="stylesheet">
    	<link rel="stylesheet" href="<?=$cssPath?>">
 		<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
 		<script type="text/javascript" src="../scripts/script.js"></script>

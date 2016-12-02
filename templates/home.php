@@ -1,4 +1,8 @@
 <div id="home_background">
+	<div id="layout_image">
+		<h1>Restaurant Guide</h1>
+		<h3>Make your tummy happy!</h3>
+	</div>
 </div>
 
 <div id="home_container">	
