@@ -12,10 +12,7 @@ header {
 	padding: 1em;
 	top: 0;
 	z-index: 9999;
-	
 }
-
-
 
 #home {
 	float: left;
@@ -34,17 +31,21 @@ header {
 #btnSearch {
 	margin-left: 52%;
 }
-
+/*
 a {
-    color: #EEF0F0;
-    text-decoration: none;
-}
+   float: right;
+   margin-right: 3em;
+   color: #F26632;
+}*/
 
 .header_link {
 	float: right;
 	margin-right: 3em;
 	color: #F26632;
 }
+
+
+
 
 /*******************/
 
