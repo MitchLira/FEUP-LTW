@@ -51,6 +51,7 @@ function handleDropdown() {
 
     $("#btnDropdown").click(function() {
         $("#userDropdown").toggle();
+        return false;
     });
 
     $("body").click(function(event) {
