@@ -24,10 +24,12 @@
 		$stmt->execute(array($name, $email, $country,$birthday, $username));
 	}
 
+	
 	function updateUserPassword($dbh, $username, $password) {
 		$stmt = $dbh->prepare('UPDATE user SET password = ? WHERE username = ?');
-		$stmt->execute(array($password $username));
+		$stmt->execute(array($password, $username));
 	}
+	
 
 	function searchUsers($dbh, $string) {
 		$param = "%" . $string . "%";

@@ -12,7 +12,7 @@
  }
 
   $cssPath = "../css/edit_profile.css";
-    include ('../templates/header.php');
-    include ('../templates/edit_profile.php');
-    include ('../templates/footer.php');
+  include ('../templates/header.php');
+  include ('../templates/edit_profile.php');
+  include ('../templates/footer.php');
 ?>
