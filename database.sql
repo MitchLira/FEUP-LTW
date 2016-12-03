@@ -21,7 +21,7 @@ CREATE TABLE restaurant (
 	street VARCHAR,
 	zipcode VARCHAR,
 	price FLOAT,
-	categories VARCHAR,
+	description VARCHAR,
 	open TIME,
 	close TIME,
 	entryDate DATE,

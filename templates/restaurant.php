@@ -26,7 +26,7 @@
 
 <button id="btnAdditionalInfo" type="button">+</button>
 <section id="additionalInfo">
-	<p id="categories"><?=$restaurant['categories']?></p>
+	<p id="description"><?=$restaurant['description']?></p>
 	<p id="open-close"><?=$restaurant['open']?>-<?=$restaurant['close']?></p>
 </section>
 

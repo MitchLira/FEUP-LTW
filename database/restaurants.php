@@ -46,7 +46,7 @@
 
 	function updateRestaurant($dbh, $restaurant) {
 		$stmt = $dbh->prepare('UPDATE restaurant SET name = ?, country = ?, city = ?, street = ?, zipcode = ?, 
-													 price = ?,  categories = ?, open = ?, close = ? WHERE id = ?');
+													 price = ?,  description = ?, open = ?, close = ? WHERE id = ?');
 
 		$array = array(
 			$restaurant['name'],
@@ -55,7 +55,7 @@
 			$restaurant['street'],
 			$restaurant['zipcode'],
 			(float) $restaurant['price'],
-			$restaurant['categories'],
+			$restaurant['description'],
 			$restaurant['open'],
 			$restaurant['close'],
 			$restaurant['id']
@@ -81,5 +81,26 @@
 							   OR street LIKE ?");
 		$stmt->execute(array($param, $param, $param, $param, $param));
 		return $stmt->fetchAll();
+	}
+
+	function insertRestaurant($dbh, $info) {
+
+		$stmt = $dbh->prepare("INSERT INTO restaurant
+							   VALUES(NULL, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, CURRENT_DATE, 0)");
+
+		$array = array(
+			$info['username'],
+			$info['name'],
+			$info['country'],
+			$info['city'],
+			$info['state'],
+			$info['street'],
+			$info['zipcode'],
+			$info['price'],
+			$info['description'],
+			$info['open'],
+			$info['close']
+		);
+		$stmt->execute($array);
 	}
 ?>

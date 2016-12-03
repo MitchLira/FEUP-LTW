@@ -20,7 +20,6 @@
 						?>
 					</h3>
 					<p><?=formatLocation($restaurant)?></p>
-					<p><?=$restaurant['categories']?></p>
 				</article>
 			<?php } ?>
 		</div>
@@ -40,7 +39,6 @@
 						?>
 					</h3>
 					<p><?=formatLocation($restaurant)?></p>
-					<p><?=$restaurant['categories']?></p>
 				</article>
 			<?php } ?>
 		</div>

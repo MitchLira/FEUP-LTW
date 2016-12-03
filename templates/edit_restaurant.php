@@ -27,7 +27,7 @@
     </label>
 
     <label>Category(ies):
-        <textarea name="categories"><?=$restaurant['categories']?></textarea>
+        <textarea name="description"><?=$restaurant['description']?></textarea>
     </label>
 
     <label>Opening Time:
@@ -39,5 +39,4 @@
     </label>
 
     <input type="submit" name="submit" value="Save" id="buttonSave">
-
 </form>
