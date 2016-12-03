@@ -12,8 +12,10 @@
   <body class=<?=pathinfo(basename($_SERVER['PHP_SELF']), PATHINFO_FILENAME)?>>
 	  <header>
 		  <a href="home.php" id="home">Restaurant Guide</a>
-		  <input type="text" id="textSearch" placeholder="Search RestaurantGuide..."/>
-		  <input type="button" id="btnSearch" value="Search" />
+			<form class="searchbar" action="../pages/search_results.php" method="get">
+				<input type="text" id="textSearch" name="text" placeholder="Search RestaurantGuide..."/>
+				<input type="button" id="btnSearch"/>
+			</form>
 
 		  <?php
 			if (isset($_SESSION['username'])) {

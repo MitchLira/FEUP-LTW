@@ -1,21 +1,23 @@
 <?php
-	$linkAddress = "../pages/profile.php?username=" . $_SESSION['username']; 
+	$linkProfile = "../pages/profile.php?username=" . $_SESSION['username']; 
 	$username = $_SESSION['username'];
 	$status = $_SESSION['status'] ?>
 
-	<a class="header_link" href="../actions/action_logout.php">Logout</a>
 	<div class="dropdown">
 		<a id="btnDropdown" class="header_link" href="#"><?=$username?></a>
-		<div id="userDropdown" class="dropdown-content">
-			<a href="#">Profile</a>
+		<div id="userDropdown" class="dropdown-content" style="margin-top: 2em">
+			<a href="<?=$linkProfile?>">Profile</a>
 
 			<?php 
 			if ($status == 'reviewer') {
-				echo "<a href=\"#\">My reviews</a>";
+				$linkReviews = "../pages/list_reviews.php?username=" . $_SESSION['username'];
+				echo "<a href=\"$linkReviews\">My reviews</a>";
 			}
 			else if ($status == 'owner') {
-				echo "<a href=\"#\">My restaurants</a>";
+				$linkRestaurants = "../pages/list_restaurants.php?username=" . $_SESSION['username'];
+				echo "<a href=\"$linkRestaurants\">My reviews</a>";
 			}
 			?>
+			<a href="../actions/action_logout.php">Logout</a>
 		</div>
 	</div>

@@ -64,10 +64,22 @@
 		$stmt->execute($array);
 	}
 
-	function getOwnerRestaurants($dbh, $username){
-		//mais tarde adicionar cenas de rating, depois de fazer trigger da base de dados
+	function getOwnerRestaurants($dbh, $username) {
 		$stmt = $dbh->prepare('SELECT name FROM restaurant WHERE owner = ?');
-		$stmt->execute(Array($username));
+		$stmt->execute(array($username));
+		return $stmt->fetchAll();
+	}
+
+	function searchRestaurants($dbh, $string) {
+		$param = "%" . $string . "%";
+
+		$stmt = $dbh->prepare("SELECT * FROM restaurant 
+							   WHERE name LIKE ?
+							   OR country LIKE ?
+							   OR city LIKE ?
+							   OR state LIKE ?
+							   OR street LIKE ?");
+		$stmt->execute(array($param, $param, $param, $param, $param));
 		return $stmt->fetchAll();
 	}
 ?>

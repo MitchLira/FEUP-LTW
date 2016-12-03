@@ -23,4 +23,17 @@
 		$stmt = $dbh->prepare('UPDATE user SET name = ?, email = ?, country = ?,  birthday = ?, password = ? WHERE username = ?');
 		$stmt->execute(array($name, $email, $country,$birthday, $password, $username));
 	}
+
+	function searchUsers($dbh, $string) {
+		$param = "%" . $string . "%";
+
+		$stmt = $dbh->prepare("SELECT * FROM user 
+							   WHERE username LIKE ?
+							   OR name LIKE ?
+							   OR country LIKE ?
+							   OR email LIKE ?");
+
+		$stmt->execute(array($param, $param, $param, $param));
+		return $stmt->fetchAll();
+	}
 ?>

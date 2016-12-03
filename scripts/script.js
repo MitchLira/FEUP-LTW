@@ -8,6 +8,7 @@ $(setUp);
 function setUp() {
     addDoms();
     handleDropdown();
+    handleSearchbar();
 
     if ($('body').hasClass('create_account')) {
         validateRegister();
@@ -55,6 +56,15 @@ function handleDropdown() {
     $("body").click(function(event) {
         if (event.target.id != "btnDropdown") {
             $("#userDropdown").hide();
+        }
+    });
+}
+
+
+function handleSearchbar() {
+    $("#textSearch").keyup(function(e) {
+        if (e.which == 13) {      // Pressed ENTER
+            $("#btnSearch").trigger('click');
         }
     });
 }
