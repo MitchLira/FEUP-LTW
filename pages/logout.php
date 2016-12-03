@@ -15,7 +15,7 @@
 			}
 			else if ($status == 'owner') {
 				$linkRestaurants = "../pages/list_restaurants.php?username=" . $_SESSION['username'];
-				echo "<a href=\"$linkRestaurants\">My reviews</a>";
+				echo "<a href=\"$linkRestaurants\">My restaurants</a>";
 			}
 			?>
 			<a href="../actions/action_logout.php">Logout</a>

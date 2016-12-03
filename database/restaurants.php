@@ -65,7 +65,7 @@
 	}
 
 	function getOwnerRestaurants($dbh, $username) {
-		$stmt = $dbh->prepare('SELECT name FROM restaurant WHERE owner = ?');
+		$stmt = $dbh->prepare('SELECT * FROM restaurant WHERE owner = ?');
 		$stmt->execute(array($username));
 		return $stmt->fetchAll();
 	}

@@ -119,9 +119,9 @@ header {
 
 #home_container {
 	margin: 0;
-	height: 100%;
 	width: 100%;
-	background: linear-gradient(white, lightgray); 
+	background: linear-gradient(white, lightgray);
+	overflow: auto;
 }
 
 #top_rated {
@@ -129,9 +129,22 @@ header {
 	margin-left: 10em;
 }
 
-#most_recent{
+#most_recent {
 	float: right;
 	margin-right: 10em;
+}
+
+
+.show_all {
+	text-align: center;
+	padding: 2em;
+	background-color: black;
+}
+
+.show_all a {
+	text-decoration: none;
+	color: white;
+	font-size: x-large;
 }
 
 a {
@@ -144,6 +157,7 @@ section {
 	width: 30em;
 	display: inline-block;
 	margin-top: 3em;
+	margin-bottom: 2em;
 }
 
 

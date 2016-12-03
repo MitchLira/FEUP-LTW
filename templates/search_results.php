@@ -1,4 +1,4 @@
-<div class="restaurant_container" style="margin-top:5em;">
+<div class="restaurant_container">
     <?php foreach($restaurants as $restaurant) { ?>
         <article class="restaurant">
             <h3>

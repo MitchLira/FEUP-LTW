@@ -46,3 +46,7 @@
 		</div>
 	</section>
 </div>
+
+<div class="show_all">
+	<a href="../pages/list_restaurants.php">View all restaurants</a>
+</div>
