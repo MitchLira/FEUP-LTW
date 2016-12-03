@@ -1,4 +1,4 @@
-<form action="../actions/save_profile.php" method="post" id="editProfile">
+<form action="../actions/save_user_password.php" method="post" id="editProfile">
     
     <input type="hidden" name="username" value="<?=$user['username']?>">
 

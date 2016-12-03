@@ -19,9 +19,14 @@
 		$stmt->execute(array($username, $name, $email, $country, 'user', $birthday, $password));
 	}
 
-	function updateUser($dbh, $username, $name, $email,$country,$birthday, $password){
-		$stmt = $dbh->prepare('UPDATE user SET name = ?, email = ?, country = ?,  birthday = ?, password = ? WHERE username = ?');
-		$stmt->execute(array($name, $email, $country,$birthday, $password, $username));
+	function updateUser($dbh, $username, $name, $email,$country,$birthday ){
+		$stmt = $dbh->prepare('UPDATE user SET name = ?, email = ?, country = ?,  birthday = ? WHERE username = ?');
+		$stmt->execute(array($name, $email, $country,$birthday, $username));
+	}
+
+	function updateUserPassword($dbh, $username, $password) {
+		$stmt = $dbh->prepare('UPDATE user SET password = ? WHERE username = ?');
+		$stmt->execute(array($password $username));
 	}
 
 	function searchUsers($dbh, $string) {

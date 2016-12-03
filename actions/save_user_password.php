@@ -4,14 +4,11 @@
 
 	if(isset($_POST['submit'])){
         $username = $_POST['username'];
-		$name = $_POST['name'];
-		$email = $_POST['email'];
-		$country =$_POST['country'];
-		$birthday = $_POST['birthday'];
 		$password = $_POST['password'];
 		$confirm_password = $_POST['confirm_password'];
+		$new_password = $_POST['new_password'];
 
-		updateUser($dbh, $username, $name, $email, $country, $birthday, $password);       
+		updateUserPassword($dbh, $username, $password);       
 		header('Location: ../pages/home.php');
 	}
 ?>
