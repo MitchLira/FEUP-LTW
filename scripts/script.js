@@ -92,14 +92,19 @@ function checkUserName() {
         data: { username : user },
         success: function(validUser) {
 
-            if (validUser == "true") {
+            if (validUser == "true" && user.length > 0) {
                 $(".info").text("Username not yet in use!");
                 $(".info").css("color", "green");
             }
-            else {
+            else if(validUser == "false" && user.length > 0 ) {
                 $(".info").text("Username already in use. Please choose a different one.");
                 $(".info").css("color", "red");
             }
+            else if(validUser == "true" && user.length <= 0)
+            {
+                 $(".info").text("");
+            }
+           
         }
     });
 }
