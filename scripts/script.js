@@ -78,14 +78,14 @@ function handleSearchbar() {
 function validateRegister() {
 
     $("input[name=username]").focusout(checkUserName);
-    $("form input").keyup(checkValidRegister);
+    $("#create_account").keyup(checkValidRegister);
     $("input[type=date]").change(checkValidRegister);
 } 
 
 
 function checkUserName() {
-    var user = $("input[name=username]").val();
-
+    var user =  $.trim($("#username").val());
+           
     $.ajax ({
         url: "../scripts/valid_user_register.php",
         type: "get",
@@ -109,7 +109,7 @@ function checkValidRegister() {
     var button = $("input[name=submit]");
     var valid = false;
 
-    $("#create_account").each(function () {
+    $(".create_account").each(function () {
         if (valid) { return valid; }
         valid = !$.trim($(this).val());
     });
@@ -170,7 +170,7 @@ function checkConfirmPassword() {
     var button = $("input[name=submit]");
     var valid = false;
 
-    $("#dit_user_password").each(function () {
+    $("#edit_user_password").each(function () {
         if (valid) { return valid; }
         valid = !$.trim($(this).val());
     });
@@ -194,6 +194,7 @@ function checkConfirmPassword() {
 
 function checkCurrentPassword() {
     var username = $("input[name=username]").val();
+    var password = $.trim($("#password").val());
     var currentPassword = $("input[name=password]").val();
         $.ajax ({
         url: "../scripts/get_user.php",
@@ -201,7 +202,7 @@ function checkCurrentPassword() {
         data: { password : currentPassword },
         success: function(samePassword) {
             
-            if (samePassword == "false") {
+            if (samePassword == "false" && password.length > 0) {
                 $(".info").text("Password is not correct!");
                 $(".info").css("color", "red");
             }

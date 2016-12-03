@@ -2,7 +2,7 @@
     <h1><a>Create Account</a></h1>
     <p>
         <label> Username: 
-            <input type="text" name="username" required> 
+            <input type="text" name="username" id="username" required> 
         </label>
     </p>
     <p class="info"></p>
