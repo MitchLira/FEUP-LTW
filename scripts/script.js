@@ -115,7 +115,7 @@ function checkValidRegister() {
     });
 
 
-    if (valid) {
+    if (!valid) {
         button.prop("disabled", true);
     }
     else {
