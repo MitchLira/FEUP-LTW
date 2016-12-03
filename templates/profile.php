@@ -1,3 +1,7 @@
+<form id="formEdit" action="../pages/edit_profile.php" method="post">
+	<input id="btnEdit" type="submit" value="Edit" />
+</form>
+
 <section id="namesInfo">
 	<h3 id="name"><?=$userProfile['name']?></h3>
 	<h4 id='username'>@<?=$userProfile['username']?></h4>

@@ -11,6 +11,7 @@
 	} catch(PDOException $e) {
 		die($e->getMessage());
 	}
+	
 	$cssPath = "../css/profile.css";
 	include('../templates/header.php');
 	include('../templates/profile.php');

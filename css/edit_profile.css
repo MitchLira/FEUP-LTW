@@ -20,7 +20,7 @@ html, body {
 	height: 100%;
 }
 
-//***** Header *****/
+/***** Header *****/
 header {
 	position: fixed;
 	background-color: #3a3d42;
@@ -108,9 +108,9 @@ header {
 .show {display:block;}
 
 
-
-
 /*******************/
+
+
 
 #editProfile {
   margin: auto;
