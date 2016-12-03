@@ -19,10 +19,12 @@
 <section id="mainInfo">
 	<h3 id="name"><?=$restaurant['name']?></h3>
 	<h4 id="owner">By: <?=$restaurant['owner']?></h4>
-	<p id="location"><?=$restaurant['location']?></p>
+	<p id="location"><?=formatLocation($restaurant)?></p>
 	<p id="price"><?=$restaurant['price']?></p>
+	<div id="map" style="z-index: 9999; width: 300px; height: 300px;"></div>
 </section>
 
+<button id="btnAdditionalInfo" type="button">+</button>
 <section id="additionalInfo">
 	<p id="categories"><?=$restaurant['categories']?></p>
 	<p id="open-close"><?=$restaurant['open']?>-<?=$restaurant['close']?></p>

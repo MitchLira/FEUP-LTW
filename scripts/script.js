@@ -7,17 +7,20 @@ $(setUp);
 
 function setUp() {
     addDoms();
+
+    if ($('body').hasClass('create_account')) {
+        validateRegister();
+    }
+    else if ($('body').hasClass('restaurant')) {
+        handleAdditionalInfo();
+    }
 }
 
 
 function addDoms() {
     if ($('body').hasClass('restaurant')) {
         $.getJSON("../scripts/restaurant.php", addReviewTextArea);
-    }
-    else if ($('body').hasClass('create_account')) {
-        $("input[name=username]").focusout(checkUserName);
-        $("form input").keyup(checkValidRegister);
-        $("input[type=date]").change(checkValidRegister);
+        addGoogleMaps();
     }
 }
 
@@ -39,6 +42,15 @@ function addReviewTextArea(session) {
         $("body").append(doms);
     }
 }
+
+
+
+function validateRegister() {
+
+    $("input[name=username]").focusout(checkUserName);
+    $("form input").keyup(checkValidRegister);
+    $("input[type=date]").change(checkValidRegister);
+} 
 
 
 function checkUserName() {
@@ -80,4 +92,36 @@ function checkValidRegister() {
     else {
         button.prop("disabled", false);
     }
+}
+
+
+function handleAdditionalInfo() {
+    $("#additionalInfo").hide();
+    $("#btnAdditionalInfo").click(function() {
+         $("#additionalInfo").slideToggle('slow', 'linear', function() {});
+    });
+}
+
+
+
+function addGoogleMaps() {
+    $.ajax ({
+        url: "../scripts/google_maps_info.php",
+        type: "get",
+        data: { id : $.urlParam('id') },
+        success: function(data) {
+                var address = data.street + ", " + data.state + ", " +
+                            data.city + ", " + data.country; 
+
+                $(function() {
+                    $("#map").googleMap({
+                        zoom: 11    
+                    });
+                    $("#map").addMarker({
+                        title: data.name,
+                        address: address
+                    });
+                });
+        }
+    });
 }

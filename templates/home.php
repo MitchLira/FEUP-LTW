@@ -13,14 +13,14 @@
 				<article class="restaurant">
 					<h3>
 						<?php
-							$linkAddress = "restaurant.php?id=" . $restaurant['idRestaurant'];
+							$linkAddress = "restaurant.php?id=" . $restaurant['id'];
 							echo "<a href=\"$linkAddress\">";
 							echo $restaurant['name'];
 							echo "</a>";
 						?>
 					</h3>
-					<p><?=$restaurant['location']?></p>
-					<p><?=$restaurant['category']?></p>
+					<p><?=formatLocation($restaurant)?></p>
+					<p><?=$restaurant['categories']?></p>
 				</article>
 			<?php } ?>
 		</div>
@@ -39,8 +39,8 @@
 							echo "</a>";
 						?>
 					</h3>
-					<p><?=$restaurant['location']?></p>
-					<p><?=$restaurant['category']?></p>
+					<p><?=formatLocation($restaurant)?></p>
+					<p><?=$restaurant['categories']?></p>
 				</article>
 			<?php } ?>
 		</div>

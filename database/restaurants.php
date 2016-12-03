@@ -15,10 +15,8 @@
 	}
 
 	function getRestaurantsByRatingLimit($dbh, $limit) {
-		$stmt = $dbh->prepare('SELECT *, AVG(rating) as rate FROM restaurant 
-							   LEFT JOIN reviews ON(restaurant.id = idRestaurant) 
-							   GROUP BY restaurant.id 
-							   ORDER BY rate DESC
+		$stmt = $dbh->prepare('SELECT * FROM restaurant 
+							   ORDER BY avgRating DESC
 							   LIMIT ?');
 		$stmt->execute(array($limit));
 		return $stmt->fetchAll();
@@ -46,9 +44,24 @@
 		return $stmt->fetch();
 	}
 
-	function updateRestaurantById($dbh, $id, $name, $location, $price, $categories, $open, $close) {
-		$stmt = $dbh->prepare('UPDATE restaurant SET name = ?, location = ?, price = ?,  categories = ?, open = ?, close = ? WHERE id = ?');
-		$stmt->execute(array($name, $location, $price,$categories, $open, $close, $id));
+	function updateRestaurant($dbh, $restaurant) {
+		$stmt = $dbh->prepare('UPDATE restaurant SET name = ?, country = ?, city = ?, street = ?, zipcode = ?, 
+													 price = ?,  categories = ?, open = ?, close = ? WHERE id = ?');
+
+		$array = array(
+			$restaurant['name'],
+			$restaurant['country'],
+			$restaurant['city'],
+			$restaurant['street'],
+			$restaurant['zipcode'],
+			(float) $restaurant['price'],
+			$restaurant['categories'],
+			$restaurant['open'],
+			$restaurant['close'],
+			$restaurant['id']
+		);
+
+		$stmt->execute($array);
 	}
 
 	function getOwnerRestaurants($dbh, $username){

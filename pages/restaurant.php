@@ -2,6 +2,7 @@
 	include_once('../database/connection.php');
 	include_once('../database/restaurants.php');
 	include_once('../database/reviews.php');
+	include_once('../utils.php');
 
 
 	$id = $_GET['id'];

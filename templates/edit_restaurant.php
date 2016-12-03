@@ -6,8 +6,20 @@
         <input type="text" name="name" value="<?=$restaurant['name']?>">
     </label>
 
-    <label>Location:
-        <input type="text" name="location" value="<?=$restaurant['location']?>">
+    <label>Country:
+        <input type="text" name="country" value="<?=$restaurant['country']?>">
+    </label>
+
+    <label>City:
+        <input type="text" name="city" value="<?=$restaurant['city']?>">
+    </label>
+
+    <label>Street:
+        <input type="text" name="street" value="<?=$restaurant['street']?>">
+    </label>
+
+    <label>Zipcode:
+        <input type="text" name="zipcode" value="<?=$restaurant['zipcode']?>">
     </label>
     
     <label>Price:
