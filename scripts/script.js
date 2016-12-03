@@ -7,6 +7,7 @@ $(setUp);
 
 function setUp() {
     addDoms();
+    handleDropdown();
 
     if ($('body').hasClass('create_account')) {
         validateRegister();
@@ -41,6 +42,21 @@ function addReviewTextArea(session) {
             "</form>";
         $("body").append(doms);
     }
+}
+
+
+
+function handleDropdown() {
+
+    $("#btnDropdown").click(function() {
+        $("#userDropdown").toggle();
+    });
+
+    $("body").click(function(event) {
+        if (event.target.id != "btnDropdown") {
+            $("#userDropdown").hide();
+        }
+    });
 }
 
 
