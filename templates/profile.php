@@ -13,6 +13,10 @@
 	<?php	} else{ ?>
 			<p id="status">User</p>
 	<?php	} ?>
+	<form action="../actions/action_upload_user_image.php" method="post" enctype="multipart/form-data">
+          <input type="file" name="image">
+          <input type="submit" value="Upload">
+    </form>
 </section>
 
 <section id="personalInfo">
@@ -27,14 +31,20 @@
 		$ownerRestaurants = getOwnerRestaurants($dbh, $userProfile['username']);
 	?>
 	<section class="restaurants">
-		<h4><?=$userProfile['name'] ?> restaurants</h4>
-	
-		<?php foreach($ownerRestaurants as $rest){ ?>
-				<p> &#10039 <?=$rest['name']?></p>
-				<!-- Depois quando se meter o trigger falta meter o rating do restaurant
-					  <p> &#10039 <?=$rest['name']?> (ver na net codigo de uma seta)<?=$rest['rating']?></p> 
-				-->
-		<?php } ?>
+		<p><?=$userProfile['name']?> restaurante:</p>
+		<?php foreach($ownerRestaurants as $restaurant) { ?>
+				<article class="restaurant">
+					<h3>
+						<?php
+							$linkAddress = "../pages/restaurant.php?id=" . $restaurant['id'];
+							echo "<a href=\"$linkAddress\">";
+							echo $restaurant['name'];
+							echo "</a>";
+						?>
+					</h3>
+					<p><?=formatLocation($restaurant)?></p>
+				</article>
+			<?php } ?>
 	</section>
 	
 <?php
@@ -45,13 +55,15 @@
 	
 	<section class="reviews">
 		<h4><?=$userProfile['name']?> reviews</h4>
-	
-		<?php foreach($reviewerRestaurants as $rest){ 
-				$nameRest = getRestaurantById($dbh, $rest['idRestaurant']); ?>
-				
-				<h5> &#10039 <?=$nameRest['name']?></h5>
-				<p>  &#10137 <?=$rest['fulltext']?></p>
-				<p>  &#10137 Rating: <?=$rest['rating']?></p>
+		<?php foreach($ownerRestaurants as $restaurant) { ?>
+				<article class="reviews">
+					<h3>
+						<?php
+							
+						?>
+					</h3>
+					<p><?=formatLocation($restaurant)?></p>
+				</article>
 		<?php } ?>
 	</section>
 
