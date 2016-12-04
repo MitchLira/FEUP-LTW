@@ -12,11 +12,9 @@
 			<p id="status">Reviewer</p>
 	<?php	} else{ ?>
 			<p id="status">User</p>
-	<?php	} ?>
-	<form action="../actions/action_upload_user_image.php" method="post" enctype="multipart/form-data">
-          <input type="file" name="image">
-          <input type="submit" value="Upload">
-    </form>
+	<?php	} 
+		include("../templates/upload.php");
+	?>
 </section>
 
 <section id="personalInfo">
