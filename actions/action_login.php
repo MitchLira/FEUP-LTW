@@ -2,7 +2,7 @@
 		include_once('../database/connection.php');
 		include_once('../database/user.php');
 		
-		if(isset($_POST['submit'])){
+		if(isset($_POST['submit'])) {
 			$username = $_POST['username'];
 			$password = $_POST['password'];
 			$realPass = getPassword($dbh, $username);
@@ -15,11 +15,8 @@
 
 				header('Location: ../pages/home.php'); 
 			}
-			else{ ?>
-				<font color="red">Username or password incorrect!</font>
-				<?php
-				header('Location: ../templates/login.html');
+			else { 
+				header('Location: ../pages/session.php');
 			}
-			
 		}
 ?>

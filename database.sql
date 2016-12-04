@@ -37,6 +37,21 @@ CREATE TABLE reviews (
 );
 
 
+
+CREATE TABLE images_user (
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	username VARCHAR REFERENCES user(username),
+	title VARCHAR DEFAULT ""
+);
+
+
+CREATE TABLE images_restaurant (
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	idRestaurant INTEGER REFERENCES restaurant(id),
+	title VARCHAR DEFAULT ""
+);
+
+
 CREATE TRIGGER update_rating AFTER INSERT ON reviews
 BEGIN
 	UPDATE restaurant SET avgRating = (

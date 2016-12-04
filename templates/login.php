@@ -1,18 +1,4 @@
-<?php
-	$cssPath = "../css/login.css";
-	include('../templates/header.php');
-	include('../templates/footer.php');
-?>
-
-<html>
-  <head>
-    <title>Login</title>
-    <meta charset="utf-8">
-   <!-- <link rel="stylesheet" href="css/style.css"> -->
-  </head>
-  <body>
-	<form action="../actions/action_login.php" method="post" id="login">
-		<h1><a>Login</a></h1>
+<form action="../actions/action_login.php" method="post" id="login">
 		<p>
 			<label> Username:
 				<input type="text" name="username" id="username" required>
