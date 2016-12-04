@@ -7,7 +7,7 @@
 		$password = $_POST['password'];
 		$confirm_password = $_POST['confirm_password'];
 		$new_password = $_POST['new_password'];
-
+		
 		updateUserPassword($dbh, $username, $password);       
 		header('Location: ../pages/home.php');
 	}

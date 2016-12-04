@@ -77,8 +77,8 @@ function handleSearchbar() {
 
 function validateRegister() {
 
-    $("input[name=username]").focusout(checkUserName);
-    $("#create_account").keyup(checkValidRegister);
+    $("input[name=username]").change(checkUserName);
+    $("form input").keyup(checkValidRegister);
     $("input[type=date]").change(checkValidRegister);
 } 
 
@@ -111,21 +111,31 @@ function checkUserName() {
 
 
 function checkValidRegister() {
+     var empty = false;
     var button = $("input[name=submit]");
-    var valid = false;
 
-    $(".create_account").each(function () {
-        if (valid) { return valid; }
-        valid = !$.trim($(this).val());
+    $("#create_account input").each(function() {
+        if ($(this).val() === "") {
+            empty = true;
+            return false;
+        }
     });
+ var user =  $.trim($("#username").val());
+           
+    $.ajax ({
+        url: "../scripts/valid_user_register.php",
+        type: "get",
+        data: { username : user },
+        success: function(validUser) {
 
-
-    if (!valid) {
-        button.prop("disabled", true);
-    }
-    else {
-        button.prop("disabled", false);
-    }
+            if (validUser == "true" && user.length > 0 && !empty) {
+                 button.prop("disabled", false);
+            }
+            else{
+                button.prop("disabled", true);
+            }
+        }
+    }); 
 }
 
 

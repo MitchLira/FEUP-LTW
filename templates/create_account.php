@@ -1,4 +1,4 @@
-<form action="../actions/action_create_account.php" method="post" id="create_account">
+<form action="../actions/action_create_account.php" method="post" id ="create_account">
     <h1><a>Create Account</a></h1>
     <p>
         <label> Username: 
@@ -272,7 +272,7 @@
     </p>
     <p>
         <label> Birthday: 
-            <input type="date" name="birthday" required> 
+            <input type="date" name="birthday"  required> 
         </label>
     </p>
     <p>
@@ -280,5 +280,5 @@
             <input type="password" name="password" required> 
         </label>
     </p>
-    <input type="submit" name="submit" value="Create">
+    <input type="submit" name="submit" value="Create" disabled>
 </form>
