@@ -6,6 +6,7 @@
    	<link rel="stylesheet" href="<?=$cssPath?>">
 		<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
 		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCfAXYcy8eU0XTFrNSXGfHZUoXnjLP-7c"></script>
+	  	<script src="https://use.fontawesome.com/23b1c5ab02.js"></script>
 		<script type="text/javascript" src="../scripts/jquery.googlemap.js"></script>
 		<script type="text/javascript" src="../scripts/script.js"></script>
   </head>
