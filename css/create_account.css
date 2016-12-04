@@ -63,7 +63,7 @@ display: -ms-flexbox;
     text-align: right;
 }
 
-#create_account h1 {
+h1 {
     text-align: center;
-    text-decoration: none;
+    font-weight: normal;
 }

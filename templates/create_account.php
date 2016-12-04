@@ -3,7 +3,7 @@
             
             <tr>
                 <td align="right"></td>
-                <td align="left"><h1 class="title">Create Account</h1><td>
+                <td align="left"><h1 >Create Account</h1><td>
             <tr>
             <tr>
                     <td align="right">Username:</td> 
@@ -300,10 +300,6 @@
 
                 <td align="right"> Password:</td>  
                 <td algin="left"><input type="password" name="password" required></td>
-                 <tr>    
-                        <td></td>
-                        <td align="left"><p></td> 
-                    </tr>   
                 
 
             </tr>
@@ -311,10 +307,6 @@
             <tr>
                 <td align="right"></td>  
                 <td align="left"><input type="submit" name="submit" value="Create" id="submit" disabled></td>
-                 <tr>    
-                        <td></td>
-                        <td align="left"><p></td> 
-                    </tr>  
             </tr>
         </table>
 </form>
