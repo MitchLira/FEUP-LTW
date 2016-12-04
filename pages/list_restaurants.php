@@ -10,7 +10,7 @@
         $restaurants = getAllRestaurants($dbh);
     }
 
-    $cssPath = "../css/home.css";
+    $cssPath = "../css/list_restaurants.css";
     include ('../templates/header.php');
     include ('../templates/list_restaurants.php');
     include ('../templates/footer.php');

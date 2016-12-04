@@ -1,0 +1,14 @@
+@import url("../css/home.css");
+
+#button {
+    background:#ccc; 
+    cursor:pointer;
+    margin: 6em 0 3em 3em;
+    padding: 0;
+    width: 5em;
+}
+
+#button:hover {
+    background-color: lightsalmon;
+	transition: background-color 300ms linear;
+}

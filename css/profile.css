@@ -1,15 +1,39 @@
 @import url("../css/common.css");
 
-section{
+section {
+  margin: auto;
+  margin-top: 15em;
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  line-height: 24px;
+  text-decoration: none;
+  padding: 10px;
+}
+
+section:not(#namesInfo){
 	width: 30em;
-	background-color: #3a3d42;
+	background-color:white;
+
+	align-content: center;
 	display: block;
 	text-align: center;
-	margin-left: 40em;
+
 
 	border: solid 2px;
 	border-width: medium;
-	border-color: #F26632;
+	border-color:  #3a3d42;
+}
+
+#namesInfo{
+	width: 30em;
+	background-color:white;
+
+	align-content: center;
+	display: block;
+	text-align: center;
+
+	border: solid 2px;
 }
 
 section:first-of-type{
@@ -21,21 +45,22 @@ section + section{
 }
 
 section h3{
-	color: #EEF0F0;
+	color: #3a3d42;
+;
 	text-align: center;
 }
 
 section h4{
-	color: #EEF0F0;
+	color: #3a3d42;
 	text-align: center;
 }
 
 #namesInfo{
-	color: #F26632;
+	color: #3a3d42;
 }
 
 #personalInfo{
-	color: #F26632;
+	color: #3a3d42;
 }
 
 .restaurants{
@@ -43,7 +68,7 @@ section h4{
 }
 
 .reviews{
-	color: #F26632;
+	color: #3a3d42;
 }
 
 a{
@@ -56,6 +81,15 @@ a{
 	margin-right: 5em;
 }
 
+
 #btnEdit {
-	margin-top: 3em;
+    background:#ccc; 
+    cursor:pointer;
+	margin-top: 1em;
+	width: 6em;
+}
+
+#btnEdit:hover {
+    background-color: lightsalmon;
+	transition: background-color 300ms linear;
 }

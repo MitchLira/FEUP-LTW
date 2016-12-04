@@ -1,10 +1,10 @@
 <?php
     if ( $status == "owner" && isset($_GET['username']) ) { 
         $linkAddress = "../pages/new_restaurant.php?username=" . $_GET['username'] ?>
-        <a href=<?=$linkAddress?> style="margin-top:5em;"><button type="button" style="margin-top:5em;">New</button></a>
+        <a href=<?=$linkAddress?>><button type="button" id="button">New</button></a>
     <?php } ?>
 
-<div class="restaurant_container" style="margin-top:5em;">
+<div class="restaurant_container">
     <?php foreach($restaurants as $restaurant) { ?>
         <article class="restaurant">
             <h3>

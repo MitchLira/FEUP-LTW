@@ -8,9 +8,9 @@
 		$email = $_POST['email'];
 		$country = $_POST['country'];
 		$birthday = $_POST['birthday'];
-		$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+		$password = $_POST['password'];
 		
-		createUser($dbh, $username, $name, $email, $country, $birthday, $password);
+		createUser($dbh, $username,$name,$email,$country,$birthday,$password);
 
 		header('Location: ../pages/home.php');
 	}

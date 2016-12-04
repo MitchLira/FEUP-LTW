@@ -6,9 +6,10 @@
 			$username = $_POST['username'];
 			$password = $_POST['password'];
 			$realPass = getPassword($dbh, $username);
-			$user = getUser($dbh, $username);
+
+			$userDb = getUser($dbh, $username);
 			
-			if(password_verify($password, $realPass)){
+			if($realPass == $password){
 				$_SESSION['username'] = $username;
 				$_SESSION['status'] = $userDb['status'];
 
