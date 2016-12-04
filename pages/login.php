@@ -6,6 +6,6 @@
 
   $cssPath = "../css/home.css";
   include ('../templates/header.php');
-  include ('../pages/login.html');
+  include ('../templates/login.html');
   include ('../templates/footer.php');
 ?>
