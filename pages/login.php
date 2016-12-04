@@ -2,7 +2,7 @@
   include_once('../database/connection.php');
   include_once('../database/user.php');
 
-  $cssPath = "../css/home.css";
+  $cssPath = "../css/login.css";
   include ('../templates/header.php');
   include ('../templates/login.php');
   include ('../templates/footer.php');

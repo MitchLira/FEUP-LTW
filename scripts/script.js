@@ -111,8 +111,8 @@ function checkUserName() {
 
 
 function checkValidRegister() {
-     var empty = false;
-    var button = $("input[name=submit]");
+    var empty = false;
+    var button = $("#submit");
 
     $("#create_account input").each(function() {
         if ($(this).val() === "") {
@@ -120,7 +120,7 @@ function checkValidRegister() {
             return false;
         }
     });
- var user =  $.trim($("#username").val());
+    var user =  $.trim($("#username").val());
            
     $.ajax ({
         url: "../scripts/valid_user_register.php",
@@ -130,9 +130,11 @@ function checkValidRegister() {
 
             if (validUser == "true" && user.length > 0 && !empty) {
                  button.prop("disabled", false);
+                 button.css("background-color", "lightsalmon");
             }
-            else{
+            else {
                 button.prop("disabled", true);
+                button.css("background-color","#ccc");
             }
         }
     }); 

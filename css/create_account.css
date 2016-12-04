@@ -1,6 +1,5 @@
 @import url("../css/common.css");
 
-
 html, body{
 display: -ms-flexbox;
 		display: -webkit-flex;
@@ -16,9 +15,9 @@ display: -ms-flexbox;
 		background: linear-gradient(transparent, transparent,transparent,transparent, #d9d9d9),  no-repeat center; 
 }
 
-#loginContent {
+#create_account {
   margin: auto;
-  margin-top: 15em;
+  margin-top: 5em;
   position: relative;
   width: fit-content;
   height: fit-content;
@@ -30,7 +29,14 @@ display: -ms-flexbox;
 }
 
 
-#loginContent input {
+#submit {
+    background:#ccc; 
+    cursor:pointer;
+	margin-top: 1em;
+}
+
+
+#create_account input {
     width: 25em;
     display: table-column;
     margin-left: 1em;
@@ -42,19 +48,22 @@ display: -ms-flexbox;
 }
 
 
-#loginButton {
-    background:#ccc; 
-    cursor:pointer;
-	margin-top: 1em;
+#country {
+    width: 25em;
+    display: table-column;
+    border: 1px solid #999;
+    margin-left: 1em;
+    height: 2em;
+    -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
 }
 
-#loginButton:hover {
-    background-color: lightsalmon;
-	transition: background-color 300ms linear;
+#create_account label {
+    text-align: right;
 }
 
-
-section {
+#create_account h1 {
     text-align: center;
-    display: inline;
+    text-decoration: none;
 }

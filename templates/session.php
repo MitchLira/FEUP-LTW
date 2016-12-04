@@ -12,16 +12,16 @@
 		<tr>
 			<td align="right">Password:</td>
 			<td aling="left"><input type="password" name="password"  id="password" required></td>
-			<tr>    
-                 <td></td>
-                 <td><p></p></td> 
-            </tr>
+		
 		</tr>
 		
+        <tr>    
+                 <td></td>
+                 <td align="right"><p>Wrong username or password!</p></td> 
+        </tr>
 		<tr>
 			<td align="right"></td>
 			<td aling="left"><input type="submit" name="submit" value="Login" id="loginButton" ></td>
 		</tr>
 	</table>
 </form>
-
