@@ -10,8 +10,7 @@
 
 			<?php 
 			if ($status == 'reviewer') {
-				$linkReviews = "../pages/list_reviews.php?username=" . $_SESSION['username'];
-				echo "<a href=\"$linkReviews\">My reviews</a>";
+				echo "<a href=\"../pages/list_reviews.php\">My reviews</a>";
 			}
 			else if ($status == 'owner') {
 				$linkRestaurants = "../pages/list_restaurants.php?username=" . $_SESSION['username'];

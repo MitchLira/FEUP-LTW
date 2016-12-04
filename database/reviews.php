@@ -7,7 +7,9 @@
 	}
 
 	function getReviewerRestaurants($dbh, $username){
-		$stmt = $dbh->prepare('SELECT idRestaurant,fulltext,rating FROM reviews WHERE username = ?');
+		$stmt = $dbh->prepare('SELECT *
+							   FROM reviews JOIN restaurant ON (restaurant.id = idRestaurant) 
+							   WHERE username = ?');
 		$stmt->execute(array($username));
 		return $stmt->fetchAll();
 	}

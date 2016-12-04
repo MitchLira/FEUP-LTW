@@ -17,16 +17,19 @@
 ?>
 
 <section id="mainInfo">
-	<h3 id="name"><?=$restaurant['name']?></h3>
-	<h4 id="owner">By: <?=$restaurant['owner']?></h4>
-	<p id="location"><?=formatLocation($restaurant)?></p>
-	<p id="price"><?=$restaurant['price']?></p>
-	<div id="map" style="z-index: 9999; width: 300px; height: 300px;"></div>
+	<h1><?=$restaurant['name']?> <span class="rating"><?=$restaurant['avgRating']?></span></h1>
+	<h4>by: @<?=$restaurant['owner']?></h4>
+	<p><?=formatLocation($restaurant)?></p>
+	<div id="map_wrapper">
+		<div id="map"></div>
+	</div>
 </section>
 
 <button id="btnAdditionalInfo" type="button">+</button>
+<div id="line"></div>
 <section id="additionalInfo">
 	<p id="description"><?=$restaurant['description']?></p>
+	<p><?=$restaurant['price']?></p>
 	<p id="open-close"><?=$restaurant['open']?>-<?=$restaurant['close']?></p>
 </section>
 

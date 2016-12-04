@@ -1,0 +1,123 @@
+html, body {
+	margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/***** Header *****/
+header {
+	position: fixed;
+	background-color: #3a3d42;
+	width: 100%;
+	padding: 1em;
+    margin: 0;
+	top: 0;
+	z-index: 9999;
+}
+
+#home {
+	position: absolute;
+	font-size: 120%;
+	color: #F26632;
+    bottom: 25%;
+}
+
+
+.searchbar {
+	position: absolute;
+	left: 50%;
+    margin: 0;
+}
+
+#textSearch {
+	position: absolute;
+	width: 20em;
+	height: 1.5em;
+	left: 50%;
+	margin: 0 0 0 -10em;
+}
+
+#btnSearch {
+	display: none;
+}
+
+
+.header_link {
+	float: right;
+	margin-right: 10em;
+	color: #F26632;
+}
+
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #3e8e41;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    float: right;
+	margin-right: 5em;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+.title {
+    font-family: 'Shadows Into Light', cursive;
+}
+
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+
+.rating > span {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+}
+
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+	content: "\2605";
+   position: absolute;
+}
+
+/*******************/
+
+a {
+  color: black;
+  text-decoration: none;
+}

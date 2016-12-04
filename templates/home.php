@@ -1,7 +1,7 @@
 <div id="home_background">
 	<div id="layout_image">
-		<h1>Restaurant Guide</h1>
-		<h3>Make your tummy happy!</h3>
+		<h1 class="title">Restaurant Guide</h1>
+		<h3 class="title">Make your tummy happy!</h3>
 	</div>
 </div>
 
