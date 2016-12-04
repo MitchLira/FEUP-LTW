@@ -12,8 +12,14 @@
 			if($realPass == $password){
 				$_SESSION['username'] = $username;
 				$_SESSION['status'] = $userDb['status'];
+
+				header('Location: ../pages/home.php'); 
+			}
+			else{ ?>
+				<font color="red">Username or password incorrect!</font>
+				<?php
+				header('Location: ../templates/login.html');
 			}
 			
-			header('Location: ../pages/home.php'); 
 		}
 ?>

@@ -92,8 +92,55 @@ header {
 
 /*******************/
 
+section{
+	width: 30em;
+	background-color: #3a3d42;
+	display: block;
+	text-align: center;
+	margin-left: 40em;
 
+	border: solid 2px;
+	border-width: medium;
+	border-color: #F26632;
+}
 
+section:first-of-type{
+	margin-top: 10em;
+}
+
+section + section{
+	margin-top: 3em;
+}
+
+section h3{
+	color: #EEF0F0;
+	text-align: center;
+}
+
+section h4{
+	color: #EEF0F0;
+	text-align: center;
+}
+
+#namesInfo{
+	color: #F26632;
+}
+
+#personalInfo{
+	color: #F26632;
+}
+
+.restaurants{
+	text-decoration: none;
+}
+
+.reviews{
+	color: #F26632;
+}
+
+a{
+	color: WHITE;
+}
 
 #formEdit {
 	float: right;

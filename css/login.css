@@ -1,0 +1,72 @@
+html, body {
+	margin: 0;
+}
+
+/***** Header *****/
+header {
+	position: fixed;
+	background-color: #3a3d42;
+	width: 100%;
+	padding: 1em;
+	top: 0;
+	z-index: 9999;
+}
+
+#home {
+	float: left;
+	font-size: 120%;
+	color: #F26632;
+}
+
+
+.searchbar {
+	display: inline;
+}
+
+#textSearch {
+	position: absolute;
+	width: 20em;
+	height: 1.5em;
+	left: 50%;
+	margin: 0 0 0 -10em;
+}
+
+#btnSearch {
+	display: none;
+}
+
+
+.header_link {
+	float: right;
+	margin-right: 3em;
+	color: #F26632;
+}
+
+/***************************/
+
+form{
+    text-align: center;
+    margin-top: 20em;
+    border: solid 2px;
+    border-color: #3a3d42;
+    background-color: #3a3d42;
+}
+
+a{
+    color: #F26632;
+}
+
+h1{
+    margin-top:em;
+}
+
+p{
+    text-align: center;
+    color: BLACK;
+}
+
+input{
+    margin-bottom: 1em;
+}
+
+
