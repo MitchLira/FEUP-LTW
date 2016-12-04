@@ -22,7 +22,7 @@
 				include('../pages/logout.php');
 			}
 			else { ?>
-				<a class="header_link" href="login.html" id="login">Login</a>
+				<a class="header_link" href="login.php" id="login">Login</a>
 				<a class="header_link" href="create_account.php" id="create">Register</a>
 			<?php }
 		  ?>
