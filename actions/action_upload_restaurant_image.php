@@ -2,18 +2,22 @@
     include_once("../database/connection.php");
     include_once("../database/images.php");
 
-    $username = $_SESSION['username'];    
-    $linkProfile = "../pages/profile.php?username=" . $username;
+    $idRest =$_GET['id'];
+    $linkProfile = "../pages/restaurant.php?id=" . $idRest;
+
+    $id = $dbh->lastInsertId(["images_restaurant"]);
+    
+    $title = $idRest . $id;
 
     try{
-		uploadUserImage($dbh, $username, $username);
+        uploadRestImage($dbh, $idRest, $title);
 	} catch(PDOException $e) {
 		die($e->getMessage());
 	}
 
-    $originalFileName = "../images/originals/$username.jpg";
-    $smallFileName = "../images/small/$username.jpg";
-    $mediumFileName = "../images/medium/$username.jpg";
+    $originalFileName = "../images/originals/$title..jpg";
+    $smallFileName = "../images/small/$title.jpg";
+    $mediumFileName = "../images/medium/$title.jpg";
 
     move_uploaded_file($_FILES['image']['tmp_name'], $originalFileName);
 

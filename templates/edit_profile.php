@@ -10,5 +10,11 @@
     </label>
 </form>
 
+<form id="formdataEdit" action="../templates/uploadUser.php" method="post">
+    <label for="passwordEdit">Change your photo:</label>
+        <input id="upload" type="submit" value="Change" />
+    </label>
+</form>
+
 
 

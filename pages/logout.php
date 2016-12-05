@@ -1,7 +1,18 @@
 <?php
+	include_once('../database/connection.php');
+	include_once('../database/images.php');
+
 	$linkProfile = "../pages/profile.php?username=" . $_SESSION['username']; 
 	$username = $_SESSION['username'];
-	$status = $_SESSION['status'] ?>
+	$status = $_SESSION['status'];
+
+	$userImage = getUserImage($dbh, $username);
+	if($userImage == $username){ ?>
+		<img src="../images/small/<?=$userImage?>.jpg">
+<?php	}
+	else{ ?>
+		<img src="../images/defaultPerfil.jpg" width="25" height="25">
+<?php	}  ?>
 
 	<div class="dropdown">
 		<a id="btnDropdown" class="header_link" href="#"><?=$username?></a>

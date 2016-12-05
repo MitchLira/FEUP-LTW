@@ -6,15 +6,21 @@
 	<h3 id="name"><?=$userProfile['name']?></h3>
 	<h4 id='username'>@<?=$userProfile['username']?></h4>
 	
-	<?php if($userProfile['status'] == 'owner'){ ?>
-			<p id="status">Owner</p>
+	<?php 	if($userProfile['status'] == 'owner'){ ?>
+				<p id="status">Owner</p>
 	<?php	} else if($userProfile['status'] == 'reviewer'){ ?>
-			<p id="status">Reviewer</p>
+				<p id="status">Reviewer</p>
 	<?php	} else{ ?>
-			<p id="status">User</p>
+				<p id="status">User</p>
 	<?php	} 
-		include("../templates/upload.php");
-	?>
+
+
+			if($userImage == $username){ ?>
+				<img src="../images/medium/<?=$userImage?>.jpg">
+	<?php	}
+			else{ ?>
+				<img src="../images/defaultPerfil.jpg" >
+	<?php	}  ?>
 </section>
 
 <section id="personalInfo">
