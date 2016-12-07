@@ -32,6 +32,7 @@ section h3 {
 
 #mainInfo {
 	color: lightsalmon;
+	background-image: url("#map");
 }
 
 .review {
@@ -54,14 +55,24 @@ section h3 {
 }
 
 #btnEdit {
-	padding: 1em;
+	background:#ccc; 
+    cursor:pointer;
+    margin: 6em auto auto 85%;
+	width: 10em;
 }
+
+#btnEdit:hover {
+    background-color: lightsalmon;
+	transition: background-color 300ms linear;
+}
+
 
 #btnAdditionalInfo {
 	width: 2em;
 	margin-left: 50%;
-	transform: translate(-1em, 1em);
+	
 }
+
 
 #upload {
 	    background:#ccc; 
@@ -80,13 +91,17 @@ section h3 {
 	transition: background-color 300ms linear;
 }
 
+
+
+
 #line {
 	width: 100%;
 	border-top: 1px solid lightsalmon;
 }
 
 #map {
-	width: 10em;
-	height: 10em;
+	width: 20em;
+	height: 15em;
 	z-index: 9999;
+	margin: 2em auto;
 }
