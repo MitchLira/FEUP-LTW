@@ -1,31 +1,21 @@
 @import url("../css/common.css");
 
 html, body{
-display: -ms-flexbox;
-display: -webkit-flex;
-display: flex;
 
--ms-flex-align: center;
--webkit-align-items: center;
--webkit-box-align: center;
-
-align-items: center;
 
 width: 100%;
 background: linear-gradient(transparent, transparent,transparent,transparent, #d9d9d9),  no-repeat center; 
 }
 
 #create_account {
-  margin: auto;
+  margin-left: 20%;
   margin-top: 5em;
-  position: relative;
   width: fit-content;
   height: fit-content;
   line-height: 24px;
   font-weight: bold;
   color: black;
   text-decoration: none;
-  padding: 10px;
 }
 
 
@@ -35,8 +25,7 @@ background: linear-gradient(transparent, transparent,transparent,transparent, #d
 	margin-top: 1em;
 }
 
-
-#create_account input:not(name="Status") {
+#create_account input {
     width: 25em;
     display: table-column;
     margin-left: 1em;
@@ -45,6 +34,7 @@ background: linear-gradient(transparent, transparent,transparent,transparent, #d
     -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+
 }
 
 #country {
@@ -63,7 +53,19 @@ background: linear-gradient(transparent, transparent,transparent,transparent, #d
 }
 
 #create_account [name="status"] {
-display: table-column;
+   
+    width: 1em;
+    margin-right: 2em;
+    border: white;
+    -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0);
+    -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0);
+}
+
+#statusRow {
+    display: table;
+    margin-left: 125%;
+  
 }
 
 #owner{

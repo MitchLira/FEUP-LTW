@@ -31,13 +31,7 @@
                     </tr>  
             </tr>
 
-            <tr>  
-                    <td align="right">Owner</td>
-                    <td align="left"><input type="radio" name="status" id="owner" value="owner"> </td>
-                    
-                    <td align="right">Reviewer</td> 
-                    <td align="left"> <input type="radio" name="status" id="reviewer" value="reviewer" checked></td> 
-            </tr>
+           
 
             <tr>
                     <td align="right"> Country:</td> 
@@ -312,10 +306,21 @@
                 
 
             </tr>
-                
+
+                            <tr id="statusRow">  
+
+                    <td align="right">Owner</td>
+                    <td align="left"><input type="radio" name="status" id="owner" value="owner"> </td>
+
+                    <td align="right">Reviewer</td> 
+                    <td align="left"> <input type="radio" name="status" id="reviewer" value="reviewer" checked></td>
+            </tr> 
+
             <tr>
                 <td align="right"></td>  
                 <td align="left"><input type="submit" name="submit" value="Create" id="submit" disabled></td>
             </tr>
+
+
         </table>
 </form>
