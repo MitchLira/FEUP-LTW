@@ -8,7 +8,7 @@
 	if (isset($_SESSION['username']) && userIsOwner($_SESSION['username'], $restaurant)) {
 		$linkAddress = "../pages/edit_restaurant.php?id=" . $restaurant['id'];
 
-	$linkAddressImage = "../templates/uploadRestaurant.php?id=" . $restaurant['id'];
+	$linkAddressImage = "../pages/upload_photo_restaurant.php?id=" . $restaurant['id'];
 ?>
 		<form id="formEdit" action="<?=$linkAddress?>" method="get">
 			<input id="btnEdit" type="submit" value="Edit" />
