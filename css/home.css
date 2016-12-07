@@ -22,7 +22,6 @@
 #home_container {
 	margin: 0;
 	width: 100%;
-	background: linear-gradient(white, lightgray);
 	overflow: auto;
 }
 
