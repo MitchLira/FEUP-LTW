@@ -45,7 +45,7 @@
 		$ownerRestaurants = getOwnerRestaurants($dbh, $userProfile['username']);
 	?>
 	<section class="restaurants">
-		<h4 id="status"><?=$userProfile['name']?>'s restaurant(s):</h4>
+		<h4 id="statusUser"><?=$userProfile['name']?>'s restaurant(s):</h4>
 		<?php foreach($ownerRestaurants as $restaurant) { ?>
 				<article class="restaurant">
 					<h3>
@@ -68,7 +68,7 @@
 	?>
 	
 	<section class="reviews">
-		<h4 id="status"><?=$userProfile['name']?> reviews</h4>
+		<h4 id="statusUser"><?=$userProfile['name']?> reviews</h4>
 		<?php foreach($ownerRestaurants as $restaurant) { ?>
 				<article class="reviews">
 					<h3>
