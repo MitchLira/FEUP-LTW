@@ -16,10 +16,10 @@
 
 
 			if($userImage == $username){ ?>
-				<img src="../images/medium/<?=$userImage?>.jpg">
+				<img src="../images/medium/<?=$userImage?>.jpg" id="profileImage"> 
 	<?php	}
 			else{ ?>
-				<img src="../images/defaultPerfil.jpg" >
+				<img src="../images/defaultPerfil.jpg" id="profileImage">
 	<?php	}  ?>
 </section>
 

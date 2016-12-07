@@ -22,6 +22,8 @@ header {
 }
 
 
+
+
 .searchbar {
 	position: absolute;
 	left: 50%;
@@ -40,13 +42,29 @@ header {
 	display: none;
 }
 
+img {
+    float: right;
+    margin-right: 5em;
+}
 
-.header_link {
-	float: right;
-	margin-right: 10em;
+#btnDropdown
+{
+    float: right;
+	margin-right: 0em;
 	color: #F26632;
 }
 
+#login{
+    float: right;
+	margin-right: 5em;
+	color: #F26632;
+}
+
+#create{
+  	float: right;
+	margin-right: 5em;
+	color: #F26632;
+}
 
 /* Dropdown Button */
 .dropbtn {
@@ -68,7 +86,7 @@ header {
 .dropdown {
     position: relative;
     float: right;
-	margin-right: 5em;
+	margin-right: 1em;
 }
 
 /* Dropdown Content (Hidden by Default) */

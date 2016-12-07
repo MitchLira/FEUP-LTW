@@ -53,8 +53,3 @@ background: linear-gradient(transparent, transparent,transparent,transparent, #d
 	transition: background-color 300ms linear;
 }
 
-
-section {
-    text-align: center;
-    display: inline;
-}
