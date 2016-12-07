@@ -44,7 +44,7 @@ function addReviewTextArea(session) {
                 "</label>" +
                 "<input id='btnSubmit' type='submit' value='Send'>" +
             "</form>";
-        $("body").append(doms);
+        $("#reviews").prepend(doms);
     }
 }
 
@@ -144,7 +144,9 @@ function checkValidRegister() {
 function handleAdditionalInfo() {
     $("#additionalInfo").hide();
     $("#btnAdditionalInfo").click(function() {
-         $("#additionalInfo").slideToggle('slow', 'linear', function() {});
+         $("#additionalInfo").slideToggle('slow', 'linear', function() {
+                google.maps.event.trigger(map, "resize"); // resize map
+         });
     });
 }
 

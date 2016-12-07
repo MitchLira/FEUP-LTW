@@ -7,9 +7,6 @@ section {
     text-align: center;
 }
 
-section:first-of-type {
-    margin-top: 3em;
-}
 
 section + section {
     margin-top: 3em;
@@ -32,7 +29,7 @@ section h3 {
 
 #mainInfo {
 	color: lightsalmon;
-	background-image: url("#map");
+	margin-top: 6em;
 }
 
 .review {
@@ -70,12 +67,17 @@ section h3 {
 #btnAdditionalInfo {
 	width: 2em;
 	margin-left: 50%;
-	
+	transform: translate(-1em, 1em);
+}
+
+#btnAdditionalInfo::after {
+	width: 100%;
+	border-top: 1px solid lightsalmon;
 }
 
 
 #upload {
-	    background:#ccc; 
+	background:#ccc; 
     cursor:pointer;
 	width: 10em;
 
@@ -92,8 +94,6 @@ section h3 {
 }
 
 
-
-
 #line {
 	width: 100%;
 	border-top: 1px solid lightsalmon;
@@ -102,5 +102,9 @@ section h3 {
 #map {
 	width: 20em;
 	height: 15em;
+	margin: 2em auto;
+}
+
+#location_wrapper {
 	margin: 2em auto;
 }

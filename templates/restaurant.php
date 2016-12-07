@@ -6,14 +6,13 @@
 
 
 	if (isset($_SESSION['username']) && userIsOwner($_SESSION['username'], $restaurant)) {
-		$linkAddress = "../pages/edit_restaurant.php?id=" . $restaurant['id'];
-
-	$linkAddressImage = "../pages/upload_photo_restaurant.php?id=" . $restaurant['id'];
+		$linkAddress = "../pages/edit_restaurant.php";
+		$linkAddressImage = "../pages/upload_photo_restaurant.php?id=" . $restaurant['id'];
 ?>
-		<form id="formEdit" action="<?=$linkAddress?>" method="get">
+		<form id="formEdit" action=<?=$linkAddress?> method="get">
+			<input type="hidden" name="id" value="<?=$restaurant['id']?>" /> 
 			<input id="btnEdit" type="submit" value="Edit" />
 		</form>
-		
 <?php
 	}
 ?>
@@ -21,16 +20,16 @@
 <section id="mainInfo">
 	<h1><?=$restaurant['name']?> <span class="rating"><?=$restaurant['avgRating']?></span></h1>
 	<h4>by: @<?=$restaurant['owner']?></h4>
-	<p><?=formatLocation($restaurant)?></p>
-	<div id="map_wrapper">
-		<div id="map"></div>
-	</div>
+	<h5><?=$restaurant['description']?></h5>
 </section>
 
 <button id="btnAdditionalInfo" type="button">+</button>
 <div id="line"></div>
 <section id="additionalInfo">
-	<p id="description"><?=$restaurant['description']?></p>
+	<div id="location_wrapper">
+		<p><?=formatLocation($restaurant)?></p>
+		<div id="map"></div>
+	</div>
 	<p><?=$restaurant['price']?></p>
 	<p id="open-close"><?=$restaurant['open']?>-<?=$restaurant['close']?></p>
 </section>

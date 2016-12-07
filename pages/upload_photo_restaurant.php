@@ -8,6 +8,4 @@
     include ('../templates/header.php');
     include ('../templates/upload_photo_restaurant.php');
     include ('../templates/footer.php');
-
-
 ?>

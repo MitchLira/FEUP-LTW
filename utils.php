@@ -1,7 +1,17 @@
 <?php
 
 function formatLocation($restaurant) {
-    return $restaurant['state'] . ", " . $restaurant['city'] . ", " . $restaurant['country'];
+    $string = "";
+
+    if ($restaurant['city']) {
+        $string .= $restaurant['city'] . ", ";
+    }
+
+    if ($restaurant['state']) {
+        $string .= $restaurant['state'] . ", ";
+    }
+
+    return $string . $restaurant['country'];
 }
 
 ?>
