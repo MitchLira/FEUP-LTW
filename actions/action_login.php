@@ -4,7 +4,7 @@
 		
 		if(isset($_POST['submit'])) {
 			$username = trim($_POST['username']);
-			$password = $_POST['password'];
+			$password = trim($_POST['password']);
 			$realPass = getPassword($dbh, $username);
 
 			$userDb = getUser($dbh, $username);

@@ -3,12 +3,12 @@
 	include_once("../database/user.php");
 
 	if(isset($_POST['submit'])){
-		$username = $_POST['username'];
-		$name = $_POST['name'];
-		$email = $_POST['email'];
+		$username = trim($_POST['username']);
+		$name = trim($_POST['name']);
+		$email = trim($_POST['email']);
 		$country = $_POST['country'];
 		$birthday = $_POST['birthday'];
-		$password = $_POST['password'];
+		$password = trim($_POST['password']);
 		
 		createUser($dbh, $username,$name,$email,$country,$birthday,$password);
 
