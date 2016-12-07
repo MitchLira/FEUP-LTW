@@ -1,5 +1,13 @@
 @import url("../css/common.css");
 
+#html, body {    
+
+	background: linear-gradient(transparent,transparent , transparent), url("../images/homeImage.jpg") no-repeat center; 
+	background-size: cover;
+
+
+}
+
 section {
   margin: auto;
   margin-top: 15em;
@@ -9,11 +17,12 @@ section {
   line-height: 24px;
   text-decoration: none;
   padding: 10px;
+  background-color: rgba(255,255,255,0.8);
 }
 
 section:not(#namesInfo){
 	width: 30em;
-	background-color:white;
+	background-color: rgba(255,255,255,0.8);
 
 	align-content: center;
 	display: block;
@@ -27,7 +36,7 @@ section:not(#namesInfo){
 
 #namesInfo{
 	width: 30em;
-	background-color:white;
+	
 	margin-bottom: 2em;
 
 	display: flex;
@@ -35,7 +44,7 @@ section:not(#namesInfo){
 	text-align: center;
 	border: solid 2px;
 
-	background-color:white;
+	
 
 	align-content: center;
 	display: block;
@@ -121,7 +130,7 @@ a{
 }
 
 #statusUser {
-	color: lightsalmon;
+	color: #3a3d42;
 }
 
 #username {

@@ -14,7 +14,7 @@
 	<h4 id='username'>@<?=$userProfile['username']?></h4>
 	
 	<?php 	if($userProfile['status'] == 'owner'){ ?>
-				<p id="status">Owner</p>
+				<p id="status">Restaurant owner</p>
 	<?php	} else if($userProfile['status'] == 'reviewer'){ ?>
 				<p id="status">Reviewer</p>
 	<?php	} else{ ?>
