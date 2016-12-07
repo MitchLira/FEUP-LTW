@@ -86,7 +86,7 @@ section h3 {
 }
 
 #map {
-	width: 20em;
-	height: 20em;
+	width: 10em;
+	height: 10em;
 	z-index: 9999;
 }
