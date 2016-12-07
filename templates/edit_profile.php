@@ -15,7 +15,7 @@
                 </tr>
         </form>
 
-        <form id="formPhoto" action="../templates/uploadUser.php" method="post">
+        <form id="formPhoto" action="../templates/upload_photo_user.php" method="post">
 
                 <tr>
                     <td align="right">Change your photo:</td>
