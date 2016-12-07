@@ -10,6 +10,7 @@
 		die($e->getMessage());
 	}
 
+    var_dump($restaurant['id']);
     $linkAddress = "../pages/restaurant.php?id=" . $restaurant['id'];
-    header("Location: " . $linkAddress);
+   // header("Location: " . $linkAddress);
 ?>

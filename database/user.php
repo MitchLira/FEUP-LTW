@@ -14,9 +14,9 @@
 		return $stmt->fetch();
 	}
 	
-	function createUser($dbh, $username, $name, $email, $country, $birthday, $password){
+	function createUser($dbh, $username, $name, $email, $country,$status, $birthday, $password){
 		$stmt = $dbh->prepare('INSERT INTO user VALUES(?,?,?,?,?,?,?)');
-		$stmt->execute(array($username, $name, $email, $country, 'user', $birthday, $password));
+		$stmt->execute(array($username, $name, $email, $country, $status, $birthday, $password));
 	}
 
 	function updateUser($dbh, $username, $name, $email,$country,$birthday){

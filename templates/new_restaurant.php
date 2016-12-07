@@ -1,5 +1,5 @@
 <form id="form_new_restaurant" action="../actions/add_restaurant.php" method="post" style="margin-top: 5em">
-    <input type="hidden" name="username" value="<?=$_GET['username']?>"/>
+        <input type="hidden" name="username" value="<?=$_GET['username']?>"/>
 
         <fieldset>
             <legend>Restaurant</legend>
@@ -47,7 +47,7 @@
 
                 <tr>
                     <td align="right">Zip Code:</td>     
-                    <td align="left"> <input type="text" name="<zipcode" required></td>  
+                    <td align="left"> <input type="text" name="zipcode" required></td>  
                 </tr>                  
             </table>
         </fieldset>
