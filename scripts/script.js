@@ -36,7 +36,7 @@ function addReviewTextArea(session) {
     if (session.status == "reviewer") {
         var doms = 
             "<textarea name='review_text' rows=\"8\" cols=\"50\" form='review_form' placeholder=\"Write your review...\" ></textarea>" +
-            "<form action='add_review.php' method='post' id='review_form' >" +
+            "<form action='../actions/add_review.php' method='post' id='review_form' >" +
                 "<input type='hidden' name='id' value='" + idRestaurant + "'>" +
                 "<input type='hidden' name='username' value='" + session.username + "'>" +
                 "<label>Rating:" +
