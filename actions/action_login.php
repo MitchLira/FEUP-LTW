@@ -9,7 +9,7 @@
 
 			$userDb = getUser($dbh, $username);
 			
-			if($realPass == $password){
+			if (password_verify($password, $realPass)) {
 				$_SESSION['username'] = $username;
 				$_SESSION['status'] = $userDb['status'];
 

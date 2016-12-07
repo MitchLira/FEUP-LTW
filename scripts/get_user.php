@@ -3,6 +3,5 @@
     include_once('../database/user.php');
 
     $user = getUser($dbh, $_SESSION['username']);
-    echo json_encode($user['password']==$_GET['password']);
-
+    echo json_encode(password_verify($_GET['password'], user['password']));
 ?>

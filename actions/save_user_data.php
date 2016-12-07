@@ -3,7 +3,7 @@
 	include_once("../database/user.php");
 
 	if(isset($_POST['submit'])){
-        $username = trim($_POST['username']);
+        $username = trim($_SESSION['username']);
 		$name = trim($_POST['name']);
 		$email = trim($_POST['email']);
 		$country =$_POST['country'];

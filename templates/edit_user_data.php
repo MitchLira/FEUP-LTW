@@ -6,8 +6,6 @@
             <td align="left"><h1 >Change your data:</h1><td>
         <tr>
 
-        <input type="hidden" name="username" value="<?=$user['username']?>">
-
         <tr>
             <td align="right">Name:</td> 
             <td align="left"><input type="text" name="name" value="<?=$user['name']?>" required></td>
@@ -21,7 +19,7 @@
         <tr>
             <td align="right"> Country:</td> 
             <td align="left"><select name="country" id="country" required>
-                <option value="">Country...</option>
+                <option value="<?=$user['country']?>"><?=$user['country']?></option>
                 <option value="Afganistan">Afghanistan</option>
                 <option value="Albania">Albania</option>
                 <option value="Algeria">Algeria</option>

@@ -30,6 +30,17 @@
                         <td align="left"><p></td> 
                     </tr>  
             </tr>
+
+            <tr>
+                     
+                        
+                        <td align="right">Owner</td>
+                        <td align="left"><input type="radio" name="Status" id="owner"> </td>
+                    
+                        <td align="right">Reviewer</td> 
+                        <td align="left"> <input type="radio" name="Status" id="reviewer" value="Reviewer"></td> 
+            </tr>
+
             <tr>
                     <td align="right"> Country:</td> 
                     <td align="left"><select name="country" id="country" required>

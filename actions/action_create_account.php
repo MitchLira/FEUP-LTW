@@ -8,10 +8,10 @@
 		$email = trim($_POST['email']);
 		$country = $_POST['country'];
 		$birthday = $_POST['birthday'];
-		$password = trim($_POST['password']);
+		$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 		
-		createUser($dbh, $username,$name,$email,$country,$birthday,$password);
+		createUser($dbh, $username, $name, $email, $country, $birthday, $password);
 
-		header('Location: ../pages/home.php');
+		header('Location: ../pages/login.php');
 	}
 ?>

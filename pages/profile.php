@@ -4,9 +4,9 @@
 	include_once('../database/images.php');
 	include_once('../database/restaurants.php');
 	include_once('../database/reviews.php');
+	include_once('../utils.php');
 	
-	
-	$username = $_GET['username'];
+	$username = $_SESSION['username'];
 	try{
 		$userProfile = getUser($dbh, $username);
 		$userImage = getUserImage($dbh, $username);

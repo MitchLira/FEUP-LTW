@@ -19,7 +19,7 @@
 		$stmt->execute(array($username, $name, $email, $country, 'user', $birthday, $password));
 	}
 
-	function updateUser($dbh, $username, $name, $email,$country,$birthday ){
+	function updateUser($dbh, $username, $name, $email,$country,$birthday){
 		$stmt = $dbh->prepare('UPDATE user SET name = ?, email = ?, country = ?,  birthday = ? WHERE username = ?');
 		$stmt->execute(array($name, $email, $country,$birthday, $username));
 	}
