@@ -23,8 +23,9 @@
 	<h5><?=$restaurant['description']?></h5>
 </section>
 
-<button id="btnAdditionalInfo" type="button">+</button>
+<button id="btnAdditionalInfo" type="button">-</button>
 <div id="line"></div>
+
 <section id="additionalInfo">
 	<div id="location_wrapper">
 		<p><?=formatLocation($restaurant)?></p>
@@ -36,12 +37,26 @@
 
 <section id="reviews">
 	<h1>Reviews</h1>
-	<?php foreach($reviews as $review) { ?>
-		<article class="review">
-			<p class="username"><?=$review['username']?></p>
-			<p class="rating"><?=$review['rating']?></p>
-			<p class="fulltext"><?=$review['fulltext']?></p>
-		</article>
+
+	<?php 
+		if ($_SESSION['status'] == "reviewer") { ?>
+			<textarea name='review_text' rows="8" cols="50" form='review_form' placeholder="Write your review..." ></textarea>
+            <form action='../actions/add_review.php' method='post' id='review_form' >
+                <input type='hidden' name='id' value="<?=$restaurant['id']?>" >
+                <input type='hidden' name='username' value="<?=$_SESSION['username']?>" >
+                <label>Rating:
+                    <input type='number' name='rating' value='0' min='0' max='5' step='0.5' required="required">
+                </label>
+                <input id='btnSubmit' type='submit' value='Send'>
+            </form>
+	<?php }
+	
+		foreach($reviews as $review) { ?>
+			<article class="review">
+				<p class="username"><?=$review['username']?></p>
+				<p class="rating"><?=$review['rating']?></p>
+				<p class="fulltext"><?=$review['fulltext']?></p>
+			</article>
 	<?php } ?>
 </section>
 

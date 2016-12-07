@@ -6,7 +6,6 @@ $.urlParam = function(name){
 $(setUp);
 
 function setUp() {
-    addDoms();
     handleDropdown();
     handleSearchbar();
 
@@ -15,36 +14,10 @@ function setUp() {
     }
     else if ($('body').hasClass('restaurant')) {
         handleAdditionalInfo();
+        addGoogleMaps();
     }
     else if ($('body').hasClass('edit_user_password')) {
         validatePassword();
-    }
-}
-
-
-function addDoms() {
-    if ($('body').hasClass('restaurant')) {
-        $.getJSON("../scripts/restaurant.php", addReviewTextArea);
-        addGoogleMaps();
-    }
-}
-
-
-function addReviewTextArea(session) {
-    var idRestaurant = $.urlParam('id');
-
-    if (session.status == "reviewer") {
-        var doms = 
-            "<textarea name='review_text' rows=\"8\" cols=\"50\" form='review_form' placeholder=\"Write your review...\" ></textarea>" +
-            "<form action='../actions/add_review.php' method='post' id='review_form' >" +
-                "<input type='hidden' name='id' value='" + idRestaurant + "'>" +
-                "<input type='hidden' name='username' value='" + session.username + "'>" +
-                "<label>Rating:" +
-                    "<input type='number' name='rating' value='0' min='0' max='5' step='0.5'>" +
-                "</label>" +
-                "<input id='btnSubmit' type='submit' value='Send'>" +
-            "</form>";
-        $("#reviews").prepend(doms);
     }
 }
 
@@ -142,11 +115,17 @@ function checkValidRegister() {
 
 
 function handleAdditionalInfo() {
-    $("#additionalInfo").hide();
+    $("#additionalInfo").show();
     $("#btnAdditionalInfo").click(function() {
-         $("#additionalInfo").slideToggle('slow', 'linear', function() {
-                google.maps.event.trigger(map, "resize"); // resize map
-         });
+         $("#additionalInfo").slideToggle('slow', 'linear', function() {});
+
+         if ( $(this).text() == "-") {
+             $(this).text("+");
+         }
+         else {
+             $(this).text("-");
+         }
+             
     });
 }
 

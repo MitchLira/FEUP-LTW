@@ -32,15 +32,25 @@ section h3 {
 	margin-top: 6em;
 }
 
+#reviews {
+	background-color: #EEE;
+}
+
 .review {
-    width: 20em;
+    width: 100%;
 	border-color: #3a3d42;
     text-decoration: none;
-    border: solid 2px;
+    border-top: solid 1px;
     border-width:medium;
-    margin-left: 50%;
-	transform: translateX(-10em);
 	margin-top: 1em;
+}
+
+.review:first-of-type {
+	margin-top: 3em;
+}
+
+.review:last-of-type {
+	padding-bottom: 3em;
 }
 
 .username {
