@@ -3,7 +3,7 @@
 		include_once('../database/user.php');
 		
 		if(isset($_POST['submit'])) {
-			$username = $_POST['username'];
+			$username = trim($_POST['username']);
 			$password = $_POST['password'];
 			$realPass = getPassword($dbh, $username);
 

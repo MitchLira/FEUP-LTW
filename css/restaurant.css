@@ -17,26 +17,26 @@ section + section {
 
 
 section h1 {
-	color: #EEF0F0;
+	color: #3a3d42;
 	text-align : center;
 }
 
 section h3 {
-	color: #EEF0F0;
+	color: #3a3d42;
 	text-align : center;
 }
 
 #additionalInfo{
-	color: #F26632;
+	color: #3a3d42;
 }
 
 #mainInfo {
-	color: #F26632;
+	color: lightsalmon;
 }
 
 .review {
     width: 20em;
-    color: #F26632;
+	border-color: #3a3d42;
     text-decoration: none;
     border: solid 2px;
     border-width:medium;
@@ -45,6 +45,13 @@ section h3 {
 	margin-top: 1em;
 }
 
+.username {
+	color: #3a3d42
+}
+
+.rating {
+	color: lightsalmon;
+}
 
 #btnEdit {
 	padding: 1em;
@@ -58,5 +65,5 @@ section h3 {
 
 #line {
 	width: 100%;
-	border-top: 1px solid black;
+	border-top: 1px solid lightsalmon;
 }
