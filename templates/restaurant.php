@@ -13,11 +13,7 @@
 		<form id="formEdit" action="<?=$linkAddress?>" method="get">
 			<input id="btnEdit" type="submit" value="Edit" />
 		</form>
-		<form id="addphoto" action="<?=$linkAddressImage?>" method="post">
-    		<label for="addphoto">Add photo:</label>
-       	 		<input id="upload" type="submit" value="Add Photo" />
-    		</label>
-		</form>
+		
 <?php
 	}
 ?>
@@ -52,6 +48,11 @@
 
 <section id="photos">
 	<h1>Photos</h1>
+	<form id="addphoto" action="<?=$linkAddressImage?>" method="post">
+    		<label for="addphoto">Add photo:</label>
+       	 		<input id="upload" type="submit" value="Add Photo" />
+    		</label>
+		</form>
 	<?php if(count($photos) > 0){
 		foreach($photos as $photo) { ?>
 		<article class="photo">
