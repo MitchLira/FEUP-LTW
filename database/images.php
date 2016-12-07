@@ -16,10 +16,18 @@
         return $stmt->fetch()['title'];
     }
 
-    function getRestImages($dbh, $idRestaurant){
+    function getRestaurantImages($dbh, $idRestaurant){
         $stmt = $dbh->prepare('SELECT title FROM images_restaurant WHERE idRestaurant = ?');
         $stmt->execute(array($idRestaurant));
         
         return $stmt->fetchAll();
+    }
+
+    function getNumberOfImagesRestaurant($dbh, $idRestaurant){
+        $stmt = $dbh->prepare('SELECT * FROM images_restaurant WHERE idRestaurant = ?');
+        $stmt->execute(array($idRestaurant));
+        $number = $stmt->fetchAll();
+        
+        return count($number);
     }
 ?>

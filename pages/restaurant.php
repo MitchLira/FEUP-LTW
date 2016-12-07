@@ -2,6 +2,7 @@
 	include_once('../database/connection.php');
 	include_once('../database/restaurants.php');
 	include_once('../database/reviews.php');
+	include_once('../database/images.php');
 	include_once('../utils.php');
 
 
@@ -9,6 +10,7 @@
 	try {
 		$restaurant = getRestaurantById($dbh, $id);
 		$reviews = getReviewsFromRestaurant($dbh, $id);
+		$photos = getRestaurantImages($dbh, $id);
 	} catch(PDOException $e) {
 		die($e->getMessage());
 	}
