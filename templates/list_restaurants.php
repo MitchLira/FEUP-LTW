@@ -1,7 +1,9 @@
 <?php
     if ( $status == "owner" && isset($_GET['username']) ) { 
         $linkAddress = "../pages/new_restaurant.php?username=" . $_GET['username'] ?>
+        <div id="wrapper">
         <a href=<?=$linkAddress?>><button type="button" id="button">New</button></a>
+        </div>
     <?php } ?>
 
 <div class="restaurant_container">

@@ -1,8 +1,15 @@
-<form id="formEdit" action="../pages/edit_profile.php" method="post">
-	<input id="btnEdit" type="submit" value="Edit" />
-</form>
+
 
 <section id="namesInfo">
+	<div>
+	<?php			if($userImage == $username){ ?>
+				<img src="../images/medium/<?=$userImage?>.jpg" id="profileImage"> 
+	<?php	}
+			else{ ?>
+				<img src="../images/defaultPerfil.jpg" id="profileImage">
+	<?php	}  ?>
+	</div>
+	<div id="infoUser">
 	<h3 id="name"><?=$userProfile['name']?></h3>
 	<h4 id='username'>@<?=$userProfile['username']?></h4>
 	
@@ -12,15 +19,18 @@
 				<p id="status">Reviewer</p>
 	<?php	} else{ ?>
 				<p id="status">User</p>
-	<?php	} 
+	<?php	} ?>
+
+	
+	</div>
+
+	<form id="formEdit" action="../pages/edit_profile.php" method="post">
+		<div>
+		<input id="btnEdit" type="submit" value="Edit" />
+		</div>
+	</form>
 
 
-			if($userImage == $username){ ?>
-				<img src="../images/medium/<?=$userImage?>.jpg" id="profileImage"> 
-	<?php	}
-			else{ ?>
-				<img src="../images/defaultPerfil.jpg" id="profileImage">
-	<?php	}  ?>
 </section>
 
 <section id="personalInfo">
