@@ -2,20 +2,20 @@
     include_once("../database/connection.php");
     include_once("../database/images.php");
 
-    $idRest =$_GET['id'];
-    $linkProfile = "../pages/restaurant.php?id=" . $idRest;
+    $idRestaurant = $_GET['id'];
+    $linkProfile = "../pages/restaurant.php?id=" . $idRestaurant;
 
-    $id = $dbh->lastInsertId(["images_restaurant"]);
-    
-    $title = $idRest . $id;
+    $id = getNumberOfImagesRestaurant($dbh, $idRestaurant);
+    echo $id;
+    $title = $idRestaurant . $id;
 
     try{
-        uploadRestImage($dbh, $idRest, $title);
+        uploadRestImage($dbh, $idRestaurant, $title);
 	} catch(PDOException $e) {
 		die($e->getMessage());
 	}
 
-    $originalFileName = "../images/originals/$title..jpg";
+    $originalFileName = "../images/originals/$title.jpg";
     $smallFileName = "../images/small/$title.jpg";
     $mediumFileName = "../images/medium/$title.jpg";
 

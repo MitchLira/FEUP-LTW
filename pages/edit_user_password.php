@@ -6,7 +6,7 @@
 
   $username = $_SESSION['username'];
   
-  $cssPath = "../css/edit_profile.css";
+  $cssPath = "../css/edit_user_password.css";
     include ('../templates/header.php');
     include ('../templates/edit_user_password.php');
     include ('../templates/footer.php');

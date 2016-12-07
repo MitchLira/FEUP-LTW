@@ -7,12 +7,13 @@
 
 	if (isset($_SESSION['username']) && userIsOwner($_SESSION['username'], $restaurant)) {
 		$linkAddress = "../pages/edit_restaurant.php?id=" . $restaurant['id'];
+
+	$linkAddressImage = "../templates/uploadRestaurant.php?id=" . $restaurant['id'];
 ?>
-<br><br>
-		<form id="formEdit" action="<?=$linkAddress?>" method="post">
+		<form id="formEdit" action="<?=$linkAddress?>" method="get">
 			<input id="btnEdit" type="submit" value="Edit" />
 		</form>
-		<form id="addphoto" action="../templates/uploadRestaurant.php?id=".$restaurant['id'] method="post">
+		<form id="addphoto" action="<?=$linkAddressImage?>" method="post">
     		<label for="addphoto">Add photo:</label>
        	 		<input id="upload" type="submit" value="Add Photo" />
     		</label>
@@ -47,4 +48,15 @@
 			<p class="fulltext"><?=$review['fulltext']?></p>
 		</article>
 	<?php } ?>
+</section>
+
+<section id="photos">
+	<h1>Photos</h1>
+	<?php if(count($photos) > 0){
+		foreach($photos as $photo) { ?>
+		<article class="photo">
+			<img src="../images/medium/<?=$photo['title']?>.jpg">
+		</article>
+	<?php } 
+	}?>
 </section>
