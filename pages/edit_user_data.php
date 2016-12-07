@@ -11,7 +11,7 @@
 		die($e->getMessage());
  }
 
-  $cssPath = "../css/edit_profile.css";
+  $cssPath = "../css/edit_user_data.css";
     include ('../templates/header.php');
     include ('../templates/edit_user_data.php');
     include ('../templates/footer.php');
