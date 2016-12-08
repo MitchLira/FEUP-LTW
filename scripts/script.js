@@ -64,20 +64,22 @@ function checkUserName() {
         type: "get",
         data: { username : user },
         success: function(validUser) {
+            $("#validation").remove();
 
             if (validUser == "true" && user.length > 0) {
-                $(".info").text("Username not yet in use!");
-                $(".info").css("color", "green");
+                $("input[name=username]").after("<i id=\"validation\" class=\"fa fa-check\" aria-hidden=\"true\"></i>");
+
+                $("#validation")
+                    .css("color", "green")
+                    .css("margin-left", "1em");
             }
             else if(validUser == "false" && user.length > 0 ) {
-                $(".info").text("Username already in use. Please choose a different one.");
-                $(".info").css("color", "red");
-            }
-            else if(validUser == "true" && user.length <= 0)
-            {
-                 $(".info").text("");
-            }
-           
+                $("input[name=username]").after("<i id=\"validation\" class=\"fa fa-times\" aria-hidden=\"true\"></i>");
+
+                $("#validation")
+                    .css("color", "red")
+                    .css("margin-left", "1em");
+            }        
         }
     });
 }

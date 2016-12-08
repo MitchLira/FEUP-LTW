@@ -47,46 +47,30 @@ img {
     margin-right: 9em;
 }
 
-#btnDropdown
-{
+#btnDropdown {
     float: right;
 	margin-right: 0em;
 	color: #F26632;
 }
 
-#login{
+#login {
     float: right;
 	margin-right: 5em;
 	color: #F26632;
 }
 
-#create{
+#create {
   	float: right;
 	margin-right: 5em;
 	color: #F26632;
 }
 
-/* Dropdown Button */
-.dropbtn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
-
-
-/* Dropdown button on hover & focus */
-.dropbtn:hover, .dropbtn:focus {
-    background-color: #3e8e41;
-}
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
     position: relative;
     float: right;
-	margin-right: 1em;
+	margin-right: 80px;
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -95,7 +79,6 @@ img {
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
 /* Links inside the dropdown */
@@ -109,8 +92,6 @@ img {
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {background-color: #f1f1f1}
 
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {display:block;}
 
 .title {
     font-family: 'Shadows Into Light', cursive;
@@ -145,4 +126,14 @@ a {
     background-color: #008CBA;
     border-color: #008CBA;
     color: white;
+}
+
+
+#img {
+    margin-left: 0.5em;
+}
+
+
+input, select {
+    background-color: white;
 }

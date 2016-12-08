@@ -80,6 +80,7 @@ html, body {
 }
 
 h1 {
+    margin-left: 2em;
     text-align: center;
     font-weight: normal;
 }

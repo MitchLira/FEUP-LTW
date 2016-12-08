@@ -1,34 +1,18 @@
 <form action="../actions/action_create_account.php" method="post" id="create_account">
-    <table>
-            
+    <h1 >Welcome !</h1>
+
+    <table>        
             <tr>
-                <td align="right"></td>
-                <td align="left"><h1 >Welcome !</h1><td>
-            <tr>
-            <tr>
-                    <td align="right">Username:</td> 
-                    <td align="left"><input type="text" name="username" id="username" required></td>
-                    <tr>    
-                        <td></td>
-                        <td align="right"><p class="info"></td> 
-                    </tr>
+                <td align="right">Username:</td> 
+                <td align="left"><input type="text" name="username" id="username" required></td>
             </tr>
 
             <tr>
-                    <td align="right">Name:</td> 
-                    <td align="left"><input type="text" name="name" required></td> 
-                   <tr>    
-                        <td></td>
-                        <td align="left"><p></td> 
-                    </tr>
-            </tr>
+                <td align="right">Name:</td> 
+                <td align="left"><input type="text" name="name" required></td> 
             <tr>
                     <td align="right"> Email:</td> 
                     <td align="left"><input type="text" name="email" required></td>
-                    <tr>    
-                        <td></td>
-                        <td align="left"><p></td> 
-                    </tr>  
             </tr>
 
            
@@ -285,35 +269,25 @@
                         <option value="Zambia">Zambia</option>
                         <option value="Zimbabwe">Zimbabwe</option>
                     </select></td>
-                     <tr>    
-                        <td></td>
-                        <td align="left"><p></td> 
-                    </tr>  
             </tr>
             
             <tr>
                     <td align="right"> Birthday:</td>  
                     <td algin="left"><input type="date" name="birthday"  required></td>
-                     <tr>    
-                        <td></td>
-                        <td align="left"><p></td> 
-                    </tr>  
             </tr>
-            <tr>
 
+            <tr>
                 <td align="right"> Password:</td>  
                 <td algin="left"><input type="password" name="password" required></td>
-                
 
             </tr>
 
             <tr id="statusRow">  
-
                     <td align="right">Owner</td>
-                    <td align="left"><input type="radio" name="status" id="owner" value="owner"> </td>
+                    <td align="left"><input type="radio" name="status" value="owner"> </td>
 
                     <td align="right">Reviewer</td> 
-                    <td align="left"> <input type="radio" name="status" id="reviewer" value="reviewer" checked></td>
+                    <td align="left"> <input type="radio" name="status" value="reviewer" checked></td>
             </tr>
 
             <tr>
