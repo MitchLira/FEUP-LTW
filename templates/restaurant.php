@@ -39,7 +39,7 @@
 	<h1>Reviews</h1>
 
 	<?php 
-		if ($_SESSION['status'] == "reviewer") { ?>
+		if (isset($_SESSION) && $_SESSION['status'] == "reviewer") { ?>
 			<div id="new_review">
 				<textarea name='review_text' rows="8" cols="50" form='review_form' placeholder="Write your review..." ></textarea>
 				<form action='../actions/add_review.php' method='post' id='review_form' >
