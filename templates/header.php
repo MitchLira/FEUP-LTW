@@ -2,7 +2,7 @@
   <head>
     <title>Restaurant Guide</title>
     <meta charset="utf-8">
-	<link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light|Open+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light|Open+Sans|Montserrat" rel="stylesheet">
    	<link rel="stylesheet" href="<?=$cssPath?>">
 		<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
 		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCfAXYcy8eU0XTFrNSXGfHZUoXnjLP-7c"></script>

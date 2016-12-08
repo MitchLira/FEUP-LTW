@@ -1,4 +1,4 @@
-<form action="../actions/action_create_account.php" method="post" id ="create_account">
+<form action="../actions/action_create_account.php" method="post" id="create_account">
     <table>
             
             <tr>
@@ -307,14 +307,14 @@
 
             </tr>
 
-                            <tr id="statusRow">  
+            <tr id="statusRow">  
 
                     <td align="right">Owner</td>
                     <td align="left"><input type="radio" name="status" id="owner" value="owner"> </td>
 
                     <td align="right">Reviewer</td> 
                     <td align="left"> <input type="radio" name="status" id="reviewer" value="reviewer" checked></td>
-            </tr> 
+            </tr>
 
             <tr>
                 <td align="right"></td>  

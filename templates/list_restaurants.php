@@ -13,7 +13,7 @@
                 <?php
                     $linkAddress = "../pages/restaurant.php?id=" . $restaurant['id'];
                     echo "<a href=\"$linkAddress\">";
-                    echo $restaurant['name'];
+                    echo $restaurant['name'] . "<span class='rating'>" . $restaurant['avgRating'] . "</span>";
                     echo "</a>";
                 ?>
             </h3>

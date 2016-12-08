@@ -18,8 +18,8 @@
 ?>
 
 <section id="mainInfo">
-	<h1><?=$restaurant['name']?> <span class="rating"><?=$restaurant['avgRating']?></span></h1>
-	<h4>by: @<?=$restaurant['owner']?></h4>
+	<h1><?=$restaurant['name']?><span class="rating"><?=$restaurant['avgRating']?></span></h1>
+	<h4 id="owner">by: @<?=$restaurant['owner']?></h4>
 	<h5><?=$restaurant['description']?></h5>
 </section>
 
@@ -28,11 +28,11 @@
 
 <section id="additionalInfo">
 	<div id="location_wrapper">
-		<p><?=formatLocation($restaurant)?></p>
+		<p>Location: <?=formatLocation($restaurant)?></p>
 		<div id="map"></div>
 	</div>
-	<p><?=$restaurant['price']?></p>
-	<p id="open-close"><?=$restaurant['open']?>-<?=$restaurant['close']?></p>
+	<p>Price: <?=$restaurant['price']?>€</p>
+	<p id="open-close">Open hours: <?=$restaurant['open']?> - <?=$restaurant['close']?></p>
 </section>
 
 <section id="reviews">
@@ -40,21 +40,22 @@
 
 	<?php 
 		if ($_SESSION['status'] == "reviewer") { ?>
-			<textarea name='review_text' rows="8" cols="50" form='review_form' placeholder="Write your review..." ></textarea>
-            <form action='../actions/add_review.php' method='post' id='review_form' >
-                <input type='hidden' name='id' value="<?=$restaurant['id']?>" >
-                <input type='hidden' name='username' value="<?=$_SESSION['username']?>" >
-                <label>Rating:
-                    <input type='number' name='rating' value='0' min='0' max='5' step='0.5' required="required">
-                </label>
-                <input id='btnSubmit' type='submit' value='Send'>
-            </form>
+			<div id="new_review">
+				<textarea name='review_text' rows="8" cols="50" form='review_form' placeholder="Write your review..." ></textarea>
+				<form action='../actions/add_review.php' method='post' id='review_form' >
+					<input type='hidden' name='id' value="<?=$restaurant['id']?>" >
+					<input type='hidden' name='username' value="<?=$_SESSION['username']?>" >
+					<label>Rate:
+						<input type='number' name='rating' value='0' min='0' max='5' step='0.5' required="required"><span>★</span>
+					</label>
+					<input id='btnSubmit' class="submit_button" type='submit' value='Send'>
+				</form>
+			</div>
 	<?php }
 	
 		foreach($reviews as $review) { ?>
 			<article class="review">
-				<p class="username"><?=$review['username']?></p>
-				<p class="rating"><?=$review['rating']?></p>
+				<p class="username"><?=$review['username']?> <span class="rating"><?=$review['rating']?></span></p>
 				<p class="fulltext"><?=$review['fulltext']?></p>
 			</article>
 	<?php } ?>

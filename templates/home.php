@@ -7,7 +7,7 @@
 
 <div id="home_container">	
 	<section id="top_rated">
-		<h1>Top reviews</h1>
+		<h1>Best of the best</h1>
 		<div class="restaurant_container">
 			<?php foreach($topRestaurants as $restaurant) { ?>
 				<article class="restaurant">
@@ -15,7 +15,7 @@
 						<?php
 							$linkAddress = "../pages/restaurant.php?id=" . $restaurant['id'];
 							echo "<a href=\"$linkAddress\">";
-							echo $restaurant['name'];
+							echo $restaurant['name'] . "<span class='rating'>" . $restaurant['avgRating'] . "</span>";
 							echo "</a>";
 						?>
 					</h3>
@@ -26,7 +26,7 @@
 	</section>
 
 	<section id="most_recent">
-		<h1>Most recent</h1>
+		<h1>Newcomers</h1>
 		<div class="restaurant_container">
 			<?php foreach($recentRestaurants as $restaurant) { ?>
 				<article class="restaurant">
@@ -34,7 +34,7 @@
 						<?php
 							$linkAddress = "../pages/restaurant.php?id=" . $restaurant['id'];
 							echo "<a href=\"$linkAddress\">";
-							echo $restaurant['name'];
+							echo $restaurant['name'] . "<span class='rating'>" . $restaurant['avgRating'] . "</span>";
 							echo "</a>";
 						?>
 					</h3>
