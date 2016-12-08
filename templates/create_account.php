@@ -3,7 +3,7 @@
             
             <tr>
                 <td align="right"></td>
-                <td align="left"><h1 >Create Account</h1><td>
+                <td align="left"><h1 >Welcome !</h1><td>
             <tr>
             <tr>
                     <td align="right">Username:</td> 
