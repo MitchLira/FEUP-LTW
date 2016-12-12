@@ -1,8 +1,7 @@
 <?php
 	include_once('../database/connection.php');
 	include_once('../database/images.php');
-
-
+	
 	$username = $_SESSION['username'];
 	$status = $_SESSION['status'];
 
@@ -22,7 +21,7 @@
 		</a>
 
 		<div id="userDropdown" class="dropdown-content" style="margin-top: 2em">
-			<a href="../pages/profile.php"><i class="fa fa-user" aria-hidden="true"></i> Profile</a>
+			<a href="../pages/profile.php?username=<?=$_SESSION['username']?>"><i class="fa fa-user" aria-hidden="true"></i> Profile</a>
 
 			<?php 
 			if ($status == 'reviewer') {

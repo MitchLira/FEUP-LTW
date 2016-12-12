@@ -3,8 +3,9 @@
   include_once('../database/user.php');
   include_once('../database/restaurants.php');
   include_once('../database/reviews.php');
-
+  
   $username = $_SESSION['username'];
+
   try {
 		$user = getUser($dbh, $username);
 	} catch(PDOException $e) {

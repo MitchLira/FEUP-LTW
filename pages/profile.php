@@ -6,8 +6,9 @@
 	include_once('../database/reviews.php');
 	include_once('../utils.php');
 	
-	$username = $_SESSION['username'];
-	try{
+	$username = $_GET['username'];
+	
+	try {
 		$userProfile = getUser($dbh, $username);
 		$userImage = getUserImage($dbh, $username);
 	} catch(PDOException $e) {
