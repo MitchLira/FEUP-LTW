@@ -1,10 +1,11 @@
 <?php
 		include_once('../database/connection.php');
 		include_once('../database/user.php');
+		include_once("../utils.php");
 		
 		if(isset($_POST['submit'])) {
-			$username = trim($_POST['username']);
-			$password = trim($_POST['password']);
+			$username = filter($_POST['username']);
+			$password = filter($_POST['password']);
 			$realPass = getPassword($dbh, $username);
 
 			$userDb = getUser($dbh, $username);

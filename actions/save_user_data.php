@@ -1,12 +1,13 @@
 <?php
 	include_once("../database/connection.php");
 	include_once("../database/user.php");
+	include_once("../utils.php");
 
 	if(isset($_POST['submit'])){
-        $username = trim($_SESSION['username']);
-		$name = trim($_POST['name']);
-		$email = trim($_POST['email']);
-		$country =$_POST['country'];
+        $username = filter($_SESSION['username']);
+		$name = filter($_POST['name']);
+		$email = filter($_POST['email']);
+		$country = $_POST['country'];
 		$birthday = $_POST['birthday'];
 
 		updateUser($dbh, $username, $name, $email, $country, $birthday);       

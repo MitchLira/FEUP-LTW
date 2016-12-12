@@ -19,6 +19,9 @@ function setUp() {
     else if ($('body').hasClass('edit_user_password')) {
         validatePassword();
     }
+    else if ($('body').hasClass('search_results')) {
+        handleLists();
+    }
 }
 
 
@@ -210,5 +213,18 @@ function checkCurrentPassword() {
                  $(".info").text("");
             }
         }
+    });
+}
+
+
+function handleLists() {
+    $("#restaurants").click(function() {
+         $(".restaurant_container").slideToggle('fast', 'swing', function() {});
+         $("#list_restaurant").toggleClass("fa fa-angle-double-down fa fa-angle-double-right");
+    });
+
+    $("#users").click(function() {
+         $(".user_container").slideToggle('fast', 'swing', function() {});
+         $("#list_user").toggleClass("fa fa-angle-double-down fa fa-angle-double-right");
     });
 }

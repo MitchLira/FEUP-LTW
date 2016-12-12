@@ -12,7 +12,7 @@
         die($e->getMessage());
     }
 
-    $cssPath = "../css/home.css";
+    $cssPath = "../css/search_results.css";
     include ('../templates/header.php');
     include ('../templates/search_results.php');
     include ('../templates/footer.php');

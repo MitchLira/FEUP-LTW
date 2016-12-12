@@ -1,3 +1,4 @@
+<h1 id="restaurants">Restaurants <i id="list_restaurant" class="fa fa-angle-double-down" aria-hidden="true"></i></h1>
 <div class="restaurant_container">
     <?php foreach($restaurants as $restaurant) { ?>
         <article class="restaurant">
@@ -14,6 +15,7 @@
     <?php } ?>
 </div>
 
+<h1 id="users">Users <i id="list_user" class="fa fa-angle-double-down" aria-hidden="true"></i></h1>
 <div class="user_container">
     <?php foreach($users as $user) { ?>
         <article class="user">

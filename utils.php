@@ -14,4 +14,8 @@ function formatLocation($restaurant) {
     return $string . $restaurant['country'];
 }
 
+function filter($value) {
+    return htmlentities(trim($value));
+}
+
 ?>

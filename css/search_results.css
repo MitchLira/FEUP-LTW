@@ -1,0 +1,44 @@
+@import url("../css/common.css");
+
+section {
+	width: 30em;
+	display: inline-block;
+	margin-top: 3em;
+	margin-bottom: 2em;
+}
+
+section h1 {
+	color: black;
+	text-align : center;
+}
+
+.restaurant_container {
+	border: 1px solid black;
+}
+
+.user_container {
+	border: 1px solid black;
+}
+
+article {
+	background-size: cover;
+ 	color: #F26632;
+  	padding: 2em;
+	text-align: center;
+}
+
+article + article {
+	border-top: 1px solid black;
+}
+
+article:hover {
+	background-color: lightsalmon;
+	transition: background-color 300ms linear;
+}
+
+h1 {
+    width: fit-content;
+    margin-left: 2em;
+    margin-top: 3em;
+    cursor: pointer;
+}
