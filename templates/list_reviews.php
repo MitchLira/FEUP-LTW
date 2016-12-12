@@ -10,11 +10,9 @@
                 ?>
             </h3>
             <p><?=formatLocation($review)?></p>
-            <p><?=$review['fulltext']?></p>
-            <p><?=$review['rating']?></p>
-
-            <div class="rating">
-                <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+            <div class="user_review">
+                <p><?=$review['fulltext']?></p>
+                <p class="rating"><?=$review['rating']?></p>
             </div>
         </article>
     <?php } ?>

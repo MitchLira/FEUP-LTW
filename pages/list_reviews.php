@@ -12,7 +12,7 @@
     }
 
 
-    $cssPath = "../css/home.css";
+    $cssPath = "../css/list_reviews.css";
     include ('../templates/header.php');
     include ('../templates/list_reviews.php');
     include ('../templates/footer.php');
