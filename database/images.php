@@ -1,7 +1,12 @@
 <?php
     function uploadUserImage($dbh, $username){
         $stmt = $dbh->prepare('INSERT INTO images_user VALUES(NULL, ?, ?)');
-        $stmt->execute(array($username, $username));
+        $stmt->execute(array($username, 'defaultPerfil'));
+    }
+
+    function updateUserImage($dbh, $username, $title){
+        $stmt = $dbh->prepare('UPDATE images_user SET title = ? WHERE username = ?');
+        $stmt->execute(array($title, $username));
     }
 
     function uploadRestImage($dbh, $idRestaurant, $title){

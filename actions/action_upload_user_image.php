@@ -4,9 +4,10 @@
 
     $username = $_SESSION['username'];    
     $linkProfile = "../pages/profile.php?username=" . $username;
+    $title = $username;
 
     try{
-		uploadUserImage($dbh, $username, $username);
+        updateUserImage($dbh, $username, $title);
 	} catch(PDOException $e) {
 		die($e->getMessage());
 	}
@@ -30,8 +31,8 @@
     $mediumwidth = $width;
     $mediumheight = $height;
 
-    if ($mediumwidth > 200) {
-        $mediumwidth = 200;
+    if ($mediumwidth > 150) {
+        $mediumwidth = 150;
         $mediumheight = $mediumheight * ( $mediumwidth / $width );
     }
 
