@@ -15,6 +15,21 @@ function setUp() {
     else if ($('body').hasClass('restaurant')) {
         handleAdditionalInfo();
         addGoogleMaps();
+
+        $(window).load(function() {
+            $('.flexslider').flexslider({
+                animation: "slide"
+            });
+
+            var maxHeight = -1;
+            $('.slides li').each(function () {
+                maxHeight = maxHeight > $(this).height() ? maxHeight : $(this).height();
+            });
+            $('.flexslider .slides li').each(function() {
+                slideHeight = $(this).height();
+                $(this).css('padding-top', (maxHeight - slideHeight)/2);
+            });
+        });
     }
     else if ($('body').hasClass('edit_user_password')) {
         validatePassword();

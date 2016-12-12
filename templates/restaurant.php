@@ -21,6 +21,18 @@
 	<h1><?=$restaurant['name']?><span class="rating"><?=$restaurant['avgRating']?></span></h1>
 	<h4 id="owner">by: @<?=$restaurant['owner']?></h4>
 	<h5><?=$restaurant['description']?></h5>
+
+	<div class="flexslider">
+		<ul class="slides">
+			<?php if(count($photos) > 0){
+				foreach($photos as $photo) { ?>
+				<li>
+					<img src="../images/originals/<?=$photo['title']?>.jpg">
+				</li>
+			<?php } 
+			}?>
+		</ul>
+	</div>
 </section>
 
 <button id="btnAdditionalInfo" type="button">-</button>
@@ -62,18 +74,11 @@
 	<?php } ?>
 </section>
 
-<section id="photos">
+<div id="photos">
 	<h1>Photos</h1>
 	<form id="addphoto" action="<?=$linkAddressImage?>" method="post">
     		<label for="addphoto">Add photo:</label>
        	 		<input id="upload" type="submit" value="Add Photo" />
     		</label>
-		</form>
-	<?php if(count($photos) > 0){
-		foreach($photos as $photo) { ?>
-		<article class="photo">
-			<img src="../images/medium/<?=$photo['title']?>.jpg">
-		</article>
-	<?php } 
-	}?>
-</section>
+	</form>
+</div>

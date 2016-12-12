@@ -6,7 +6,6 @@
     $linkProfile = "../pages/restaurant.php?id=" . $idRestaurant;
 
     $id = getNumberOfImagesRestaurant($dbh, $idRestaurant);
-    
     $title = $idRestaurant . $id;
 
     try{

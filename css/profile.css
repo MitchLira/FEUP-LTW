@@ -47,10 +47,10 @@ section:not(#namesInfo){
 	border-color:  #3a3d42;
 }
 
-
-
-
-
+img {
+    float: right;
+    margin-right: 9em;
+}
 
 
 #infoUser {
