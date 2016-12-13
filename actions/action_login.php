@@ -1,4 +1,5 @@
 <?php
+		session_set_cookie_params(0, "/", "fe.up.pt", true, true);
 		include_once('../database/connection.php');
 		include_once('../database/user.php');
 		include_once("../utils.php");
