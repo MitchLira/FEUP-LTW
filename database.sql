@@ -54,11 +54,11 @@ CREATE TABLE images_restaurant (
 
 CREATE TRIGGER update_rating AFTER INSERT ON reviews
 BEGIN
-	UPDATE restaurant SET avgRating = (
+	UPDATE restaurant SET avgRating = round((
 		SELECT AVG(rating) FROM restaurant
 		JOIN reviews ON (restaurant.id = NEW.idRestaurant)
 		GROUP BY (idRestaurant)
 		HAVING (idRestaurant = NEW.idRestaurant)
-	)
+	), 1)
 	WHERE (restaurant.id = NEW.idRestaurant);
 END;

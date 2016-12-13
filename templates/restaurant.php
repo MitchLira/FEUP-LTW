@@ -48,29 +48,31 @@
 </section>
 
 <section id="reviews">
-
-	<?php 
-		$status = isset($_SESSION) ? $_SESSION['status'] : ''; 
-		if ($status == "reviewer") { ?>
-			<div id="new_review">
-				<textarea name='review_text' rows="8" cols="50" form='review_form' placeholder="Write your review..." ></textarea>
-				<form action='../actions/add_review.php' method='post' id='review_form' >
-					<input type='hidden' name='id' value="<?=$restaurant['id']?>" >
-					<input type='hidden' name='username' value="<?=$_SESSION['username']?>" >
-					<label>Rate:
-						<input type='number' name='rating' value='0' min='0' max='5' step='0.5' required="required"><span>★</span>
-					</label>
-					<input id='btnSubmit' class="submit_button" type='submit' value='Send'>
-				</form>
-			</div>
-	<?php }
-		if(count($reviews) > 0){ ?>
-			<h1>Reviews</h1>
-			<?php foreach($reviews as $review) { ?>
-					<article class="review">
-						<p class="username"><?=$review['username']?> <span class="rating"><?=$review['rating']?></span></p>
-						<p class="fulltext"><?=$review['fulltext']?></p>
-					</article>
-			<?php } 
-		}?>
+	<h1>Reviews</h1>
+<?php 
+	$status = isset($_SESSION) ? $_SESSION['status'] : '';  
+	if ($status == "reviewer") { ?>
+		<div id="new_review">
+			<textarea name='review_text' rows="8" cols="50" form='review_form' placeholder="Write your review..." ></textarea>
+			<form action='../actions/add_review.php' method='post' id='review_form' >
+				<input type='hidden' name='id' value="<?=$restaurant['id']?>" >
+				<input type='hidden' name='username' value="<?=$_SESSION['username']?>" >
+				<label>Rate:
+					<input type='number' name='rating' value='0' min='0' max='5' step='0.1' required="required"><span>★</span>
+				</label>
+				<input id='btnSubmit' class="submit_button" type='submit' value='Send'>
+			</form>
+		</div>
+<?php }
+		
+	if (count($reviews) > 0) {
+		foreach($reviews as $review) { ?>
+		<article class="review">
+			<p class="username"><?=$review['username']?> <span class="rating"><?=$review['rating']?></span></p>
+			<p class="fulltext"><?=$review['fulltext']?></p>
+		</article>
+<?php } 
+	} else {
+		echo "<h5>This restaurant hasn't been reviewed yet...</h5>"; 
+	} ?>
 </section>

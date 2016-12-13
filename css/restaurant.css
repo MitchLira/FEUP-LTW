@@ -38,6 +38,9 @@ section h3 {
 
 #reviews {
 	background-color: #EEE;
+	margin-bottom: 0;
+	padding-top: 1em;
+	padding-bottom: 1em;
 }
 
 .review {

@@ -1,6 +1,10 @@
 <form action="../actions/action_login.php" method="post" id="loginContent">
 	<table>
 		<tr>
+                <td align="right"></td>
+                <td align="left"><h1>Sign in</h1><td>
+        <tr>
+		<tr>
 			<td align="right">Username:</td>
 			<td align="left"><input type="text" name="username" id="username" required></td>
 			<tr>    
