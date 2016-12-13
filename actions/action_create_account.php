@@ -1,6 +1,7 @@
 <?php
 	include_once("../database/connection.php");
 	include_once("../database/user.php");
+	include_once("../database/images.php");
 	include_once("../utils.php");
 
 	if(isset($_POST['submit'])){
@@ -13,6 +14,7 @@
 		$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 		
 		createUser($dbh, $username, $name, $email, $country,$status, $birthday, $password);
+		uploadUserImage($dbh, $username);
 
 		header('Location: ../pages/login.php');
 	}

@@ -11,13 +11,7 @@
 	<div class="dropdown">
 		<a id="btnDropdown" class="header_link" href="#">
 			<?=$username?>
-	<?php	if($userImage == $username){ 
-				echo "<img id='img' src='../images/small/<?=$userImage?>.jpg'>";
-			}
-			else{
-				echo "<img id='img' src='../images/defaultPerfil.jpg' width='25' height='25'>";
-			} 
-	?>
+			<img id='img' src='../images/medium/<?=$userImage?>.jpg' width="40" heitght="30">
 		</a>
 
 		<div id="userDropdown" class="dropdown-content" style="margin-top: 2em">

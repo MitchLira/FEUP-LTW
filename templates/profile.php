@@ -1,11 +1,6 @@
 <section id="namesInfo">
 	<div>
-		<?php	if($userImage == $username){ ?>
-					<img src="../images/medium/<?=$userImage?>.jpg" id="profileImage"> 
-		<?php	}
-				else{ ?>
-					<img src="../images/defaultPerfil.jpg" id="profileImage">
-		<?php	}  ?>
+		<img src="../images/medium/<?=$userImage?>.jpg" id="profileImage" width="150" height="150">
 	</div>
 
 	<div id="infoUser">
@@ -31,8 +26,6 @@
 				</div>
 			</form>
 	<?php } ?>
-
-
 </section>
 
 <section id="personalInfo">

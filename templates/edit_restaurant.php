@@ -40,3 +40,11 @@
 
     <input type="submit" name="submit" value="Save" id="buttonSave">
 </form>
+
+<?php 
+    $linkAddressImage = "../pages/upload_photo_restaurant.php?id=" . $restaurant['id'];
+?>
+
+<form id="addphoto" action="<?=$linkAddressImage?>" method="post">
+    <input id="upload" type="submit" value="Add Photo" />
+</form>

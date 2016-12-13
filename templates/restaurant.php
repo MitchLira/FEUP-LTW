@@ -7,7 +7,6 @@
 
 	if (isset($_SESSION['username']) && userIsOwner($_SESSION['username'], $restaurant)) {
 		$linkAddress = "../pages/edit_restaurant.php";
-		$linkAddressImage = "../pages/upload_photo_restaurant.php?id=" . $restaurant['id'];
 ?>
 		<form id="formEdit" action=<?=$linkAddress?> method="get">
 			<input type="hidden" name="id" value="<?=$restaurant['id']?>" /> 
@@ -22,17 +21,18 @@
 	<h4 id="owner">by: @<?=$restaurant['owner']?></h4>
 	<h5><?=$restaurant['description']?></h5>
 
-	<div class="flexslider">
-		<ul class="slides">
-			<?php if(count($photos) > 0){
-				foreach($photos as $photo) { ?>
-				<li>
-					<img src="../images/originals/<?=$photo['title']?>.jpg">
-				</li>
-			<?php } 
-			}?>
-		</ul>
-	</div>
+	<?php if(count($photos) > 0){ ?>
+		<div class="flexslider">
+			<ul class="slides">
+					<h1>Photos</h1> 
+				<?php foreach($photos as $photo) { ?>
+					<li>
+						<img src="../images/originals/<?=$photo['title']?>.jpg">
+					</li>
+				<?php } ?>
+			</ul>
+		</div>
+	<?php } ?>
 </section>
 
 <button id="btnAdditionalInfo" type="button">-</button>
@@ -48,7 +48,6 @@
 </section>
 
 <section id="reviews">
-	<h1>Reviews</h1>
 
 	<?php 
 		$status = isset($_SESSION) ? $_SESSION['status'] : ''; 
@@ -65,20 +64,13 @@
 				</form>
 			</div>
 	<?php }
-	
-		foreach($reviews as $review) { ?>
-			<article class="review">
-				<p class="username"><?=$review['username']?> <span class="rating"><?=$review['rating']?></span></p>
-				<p class="fulltext"><?=$review['fulltext']?></p>
-			</article>
-	<?php } ?>
+		if(count($reviews) > 0){ ?>
+			<h1>Reviews</h1>
+			<?php foreach($reviews as $review) { ?>
+					<article class="review">
+						<p class="username"><?=$review['username']?> <span class="rating"><?=$review['rating']?></span></p>
+						<p class="fulltext"><?=$review['fulltext']?></p>
+					</article>
+			<?php } 
+		}?>
 </section>
-
-<div id="photos">
-	<h1>Photos</h1>
-	<form id="addphoto" action="<?=$linkAddressImage?>" method="post">
-    		<label for="addphoto">Add photo:</label>
-       	 		<input id="upload" type="submit" value="Add Photo" />
-    		</label>
-	</form>
-</div>
