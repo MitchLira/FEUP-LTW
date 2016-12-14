@@ -11,7 +11,7 @@
 	<div class="dropdown">
 		<a id="btnDropdown" class="header_link" href="#">
 			<?=$username?>
-			<img id='img' src='../images/medium/<?=$userImage?>.jpg' width="40" heitght="30">
+			<img id='img' src='../images/medium/<?=$userImage?>.jpg' width="30" heitght="30">
 		</a>
 
 		<div id="userDropdown" class="dropdown-content" style="margin-top: 2em">
