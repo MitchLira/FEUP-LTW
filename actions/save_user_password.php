@@ -4,7 +4,7 @@
 
 	if (isset($_POST['submit'])) {
         $username = $_SESSION['username'];
-		$new_password = $_POST['new_password'];
+		$new_password = password_hash($_POST['new_password'], PASSWORD_DEFAULT);
 		
 		updateUserPassword($dbh, $username, $new_password);       
 		header('Location: ../pages/home.php');
