@@ -2,7 +2,8 @@
 
 section {
   margin: auto;
-  margin-top: 15em;
+  margin-top: 10em;
+  margin-bottom: 0em;
   position: relative;
   width: fit-content;
   height: fit-content;
@@ -83,11 +84,11 @@ img {
 
 
 section:first-of-type{
-	margin-top: 10em;
+	margin-top: 6em;
 }
 
 section + section{
-	margin-top: 3em;
+	margin-top: 2em;
 }
 
 section h3{
