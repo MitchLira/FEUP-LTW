@@ -149,5 +149,6 @@ textarea[name=review_text] {
 
 .flexslider {
 	width: 100%;
+	overflow: visible;
 	background-color: lightsalmon;
 }
