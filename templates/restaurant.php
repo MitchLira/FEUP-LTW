@@ -50,7 +50,14 @@
 <section id="reviews">
 	<h1>Reviews</h1>
 <?php 
-	$status = isset($_SESSION) ? $_SESSION['status'] : '';  
+	if(isset($_SESSION['status']) && !empty($_SESSION['status']))
+	{
+		$status = $_SESSION['status'];
+	}
+	else
+	{
+		$status = '';
+	}
 	if ($status == "reviewer") { ?>
 		<div id="new_review">
 			<textarea name='review_text' rows="8" cols="50" form='review_form' placeholder="Write your review..." ></textarea>
