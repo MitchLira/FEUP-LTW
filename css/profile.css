@@ -55,6 +55,7 @@ img {
 
 #infoUser {
 	margin-right: 5em;
+	min-height: 170px;
 }
 
 #btnEdit {
