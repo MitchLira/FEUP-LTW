@@ -1,8 +1,8 @@
 html, body {
 	margin: 0;
     font-family: 'Open Sans', sans-serif;
-    overflow: -moz-scrollbars-vertical; 
-    overflow-y: scroll;
+    
+    
 }
 
 /***** Header *****/
