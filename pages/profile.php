@@ -10,7 +10,7 @@
 	
 	try {
 		$userProfile = getUser($dbh, $username);
-		$userImage = getUserImage($dbh, $username);
+		$userImageProfile = getUserImage($dbh, $username);
 	} catch(PDOException $e) {
 		die($e->getMessage());
 	}

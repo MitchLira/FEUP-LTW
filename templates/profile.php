@@ -1,6 +1,6 @@
 <section id="namesInfo">
 	<div>
-		<img src="../images/medium/<?=$userImage?>.jpg" id="profileImage" width="150" height="150">
+		<img src="../images/medium/<?=$userImageProfile?>.jpg" id="profileImage" width="150" height="150">
 	</div>
 
 	<div id="infoUser">
